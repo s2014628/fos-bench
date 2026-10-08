@@ -1,0 +1,713 @@
+{
+  "2WikiMultihopQA": {
+    "id": "2WikiMultihopQA",
+    "label": "跨段落多跳问答",
+    "about": "答案需要连接多个证据段落中的事实，测试跨信息推理。",
+    "input": "问题和冻结的证据段落。",
+    "action": "串联相关事实，给出简短答案。",
+    "group": "问答",
+    "methodId": "2WikiMultihopQA"
+  },
+  "AQuA-RAT": {
+    "id": "AQuA-RAT",
+    "label": "数学选择题",
+    "about": "用带候选答案的定量推理题，测试计算与数学选项判断。",
+    "input": "数学题干和候选选项。",
+    "action": "完成推理并选择一个答案。",
+    "group": "数学",
+    "methodId": "AQuA-RAT"
+  },
+  "ARC-Challenge": {
+    "id": "ARC-Challenge",
+    "label": "学校科学推理",
+    "about": "用较有挑战性的学校科学选择题，测试科学知识与推断。",
+    "input": "科学题干和候选选项。",
+    "action": "选择一个正确答案。",
+    "group": "知识与推理",
+    "methodId": "ARC-Challenge"
+  },
+  "BBH": {
+    "id": "BBH",
+    "label": "困难推理任务集合",
+    "about": "由多种困难推理子任务组成，测试语言、符号与组合推理。",
+    "input": "某一子任务的问题及必要说明。",
+    "action": "依照该子任务要求返回最终答案。",
+    "group": "知识与推理",
+    "methodId": "BBH"
+  },
+  "BFCL-v4-static": {
+    "id": "BFCL-v4-static",
+    "label": "函数调用与参数选择",
+    "about": "测试选择函数、填写参数，以及识别不该调用工具的请求；本轮为静态调用评测。",
+    "input": "用户请求和可用函数定义。",
+    "action": "输出所需函数调用及参数，或判断不应调用；不执行真实 API。",
+    "group": "代码与工具",
+    "methodId": "BFCL-v4-static"
+  },
+  "Bamboogle": {
+    "id": "Bamboogle",
+    "label": "困难事实问答",
+    "about": "用较难的事实问题测试知识作答；本轮采用闭卷条件。",
+    "input": "问题，不提供搜索工具。",
+    "action": "直接给出事实答案。",
+    "group": "问答",
+    "methodId": "Bamboogle"
+  },
+  "BoolQ": {
+    "id": "BoolQ",
+    "label": "段落是非判断",
+    "about": "根据一段文字判断一个问题能否得到肯定回答。",
+    "input": "一段文字、问题及是/否选项。",
+    "action": "阅读材料后选择是或否。",
+    "group": "问答",
+    "methodId": "BoolQ"
+  },
+  "BrowseComp-closed": {
+    "id": "BrowseComp-closed",
+    "label": "网页研究问题 · 闭卷",
+    "about": "用困难网页研究问题作闭卷基线，观察没有自主浏览时的作答表现。",
+    "input": "研究问题，不接搜索或浏览工具。",
+    "action": "直接回答问题；此条件不评价自主浏览过程。",
+    "group": "问答",
+    "methodId": "BrowseComp-closed"
+  },
+  "CRUXEval-O": {
+    "id": "CRUXEval-O",
+    "label": "Python 输出预测",
+    "about": "给出代码和输入，测试能否理解程序执行后的结果。",
+    "input": "Python 函数及其输入。",
+    "action": "返回输出值的字面量，而非重新编写程序。",
+    "group": "代码与工具",
+    "methodId": "CRUXEval-O"
+  },
+  "CaseHOLD": {
+    "id": "CaseHOLD",
+    "label": "法律文本理解",
+    "about": "在法律上下文中选择合适的裁判要旨表述，测试法律语言理解。",
+    "input": "法律上下文和候选表述。",
+    "action": "选择匹配上下文的表述。",
+    "group": "知识与推理",
+    "methodId": "CaseHOLD"
+  },
+  "CommonsenseQA": {
+    "id": "CommonsenseQA",
+    "label": "日常常识判断",
+    "about": "用概念关系与日常情境选择题，测试常识推理。",
+    "input": "常识问题和候选选项。",
+    "action": "选择最符合题意的答案。",
+    "group": "知识与推理",
+    "methodId": "CommonsenseQA"
+  },
+  "FRAMES-reference-URL": {
+    "id": "FRAMES-reference-URL",
+    "label": "参考网页证据问答",
+    "about": "与 FRAMES 使用同一题源，但提供指定参考网页的固定正文片段，测试证据阅读与整合。",
+    "input": "问题和从给定参考 URL 读取的正文片段。",
+    "action": "从已给材料中整合证据，回答问题。",
+    "group": "问答",
+    "methodId": "FRAMES-reference-URL"
+  },
+  "FRAMES": {
+    "id": "FRAMES",
+    "label": "多事实问答 · 闭卷",
+    "about": "用需要整合多个事实的问题测试直接作答；本轮不提供网页正文。",
+    "input": "问题，不提供检索正文。",
+    "action": "依据可用知识给出最终答案。",
+    "group": "问答",
+    "methodId": "FRAMES"
+  },
+  "GSM8K": {
+    "id": "GSM8K",
+    "label": "小学多步数学",
+    "about": "用日常情境中的文字题，测试能否把数量关系拆成多步计算。",
+    "input": "一道文字数学题。",
+    "action": "计算并返回最终数值。",
+    "group": "数学",
+    "methodId": "GSM8K"
+  },
+  "HellaSwag": {
+    "id": "HellaSwag",
+    "label": "情境后续判断",
+    "about": "给出一个情境，让系统判断接下来哪种事件最合理。",
+    "input": "情境上下文和若干候选续写。",
+    "action": "选择合理的后续事件。",
+    "group": "知识与推理",
+    "methodId": "HellaSwag"
+  },
+  "HotpotQA": {
+    "id": "HotpotQA",
+    "label": "带干扰材料的多跳问答",
+    "about": "在多份材料中同时出现相关证据和干扰信息，测试筛选与整合能力。",
+    "input": "问题及包含干扰段落的上下文。",
+    "action": "找出相关证据并回答问题。",
+    "group": "问答",
+    "methodId": "HotpotQA"
+  },
+  "HumanEval": {
+    "id": "HumanEval",
+    "label": "Python 代码生成",
+    "about": "根据函数说明编写代码，测试程序是否能通过参考测试。",
+    "input": "Python 函数前缀和问题说明，参考测试不交给作答系统。",
+    "action": "补全可执行函数；评分器再运行测试。",
+    "group": "代码与工具",
+    "methodId": "HumanEval"
+  },
+  "IFEval": {
+    "id": "IFEval",
+    "label": "可验证的指令遵循",
+    "about": "用能自动检查的语言与格式要求，测试回答是否严格遵守指令。",
+    "input": "带指定语言、格式等约束的提示。",
+    "action": "生成符合要求的回答，由评分器逐项检查。",
+    "group": "代码与工具",
+    "methodId": "IFEval"
+  },
+  "LogiQA": {
+    "id": "LogiQA",
+    "label": "阅读与逻辑推理",
+    "about": "根据给定情境判断论证、推断与逻辑关系。",
+    "input": "情境文字、问题和候选选项。",
+    "action": "选择符合逻辑的答案。",
+    "group": "知识与推理",
+    "methodId": "LogiQA"
+  },
+  "MATH-500": {
+    "id": "MATH-500",
+    "label": "竞赛数学",
+    "about": "用代数、几何、数论等竞赛题，测试较复杂的数学推理。",
+    "input": "一道竞赛数学题。",
+    "action": "推导并给出最终数学答案。",
+    "group": "数学",
+    "methodId": "MATH-500"
+  },
+  "MMLU-Pro": {
+    "id": "MMLU-Pro",
+    "label": "进阶多学科推理",
+    "about": "用难度增强的多学科选择题，测试更复杂的知识运用与推理。",
+    "input": "固定测试划分中的题干和候选选项。",
+    "action": "推理后选择一个答案。",
+    "group": "知识与推理",
+    "methodId": "MMLU-Pro"
+  },
+  "MMLU": {
+    "id": "MMLU",
+    "label": "多学科知识选择题",
+    "about": "用多个学科的选择题，测试知识掌握与基础推理。",
+    "input": "某学科的题干和候选选项。",
+    "action": "选择一个正确答案。",
+    "group": "知识与推理",
+    "methodId": "MMLU"
+  },
+  "MuSiQue": {
+    "id": "MuSiQue",
+    "label": "组合式多跳问答",
+    "about": "把几个相互依赖的小问题组合起来，测试能否完成连续推理。",
+    "input": "问题和完整的公开上下文段落。",
+    "action": "逐步连接证据，回答最终问题。",
+    "group": "问答",
+    "methodId": "MuSiQue"
+  },
+  "NQ-open": {
+    "id": "NQ-open",
+    "label": "真实搜索问题问答",
+    "about": "用来自真实搜索需求的开放域问题，测试能否给出准确的短答案。",
+    "input": "问题，不提供额外网页工具。",
+    "action": "返回对应的实体或简短事实答案。",
+    "group": "问答",
+    "methodId": "NQ-open"
+  },
+  "PopQA": {
+    "id": "PopQA",
+    "label": "长尾实体知识",
+    "about": "用不同知名度实体的事实问题，测试对较少见知识的掌握。",
+    "input": "实体相关的问题；本轮闭卷作答。",
+    "action": "给出所问的事实答案。",
+    "group": "问答",
+    "methodId": "PopQA"
+  },
+  "PubMedQA": {
+    "id": "PubMedQA",
+    "label": "生物医学摘要判断",
+    "about": "根据生物医学文献摘要，判断研究问题得到肯定、否定还是不确定的结论。",
+    "input": "研究问题、摘要上下文和 yes/no/maybe 选项。",
+    "action": "选择材料支持的结论。",
+    "group": "问答",
+    "methodId": "PubMedQA"
+  },
+  "RACE": {
+    "id": "RACE",
+    "label": "文章阅读理解",
+    "about": "用文章及配套问题，测试理解细节、主旨和隐含关系。",
+    "input": "文章、问题和候选选项。",
+    "action": "依据文章选择答案。",
+    "group": "知识与推理",
+    "methodId": "RACE"
+  },
+  "SVAMP": {
+    "id": "SVAMP",
+    "label": "文字数学变式",
+    "about": "用改变措辞或数量关系的文字数学题，测试是否真正理解题意。",
+    "input": "一道改写后的文字数学题。",
+    "action": "识别数量关系并算出最终数值。",
+    "group": "数学",
+    "methodId": "SVAMP"
+  },
+  "SciBench": {
+    "id": "SciBench",
+    "label": "大学科学计算",
+    "about": "用大学科学课程中的计算题，测试科学知识、公式运用与数值推理。",
+    "input": "一道科学计算题。",
+    "action": "计算并按本轮要求返回最终数值。",
+    "group": "数学",
+    "methodId": "SciBench"
+  },
+  "TriviaQA": {
+    "id": "TriviaQA",
+    "label": "知识与事实问答",
+    "about": "用知识问答题测试实体与事实回忆；本轮不给检索上下文。",
+    "input": "一道事实问题。",
+    "action": "返回允许答案别名对应的短答案。",
+    "group": "问答",
+    "methodId": "TriviaQA"
+  },
+  "TruthfulQA": {
+    "id": "TruthfulQA",
+    "label": "常见误解辨别",
+    "about": "用容易诱发常见误解的问题，测试是否选择真实的陈述。",
+    "input": "问题和重排后的候选答案。",
+    "action": "选择一个答案；本轮采用单选适配指标。",
+    "group": "知识与推理",
+    "methodId": "TruthfulQA"
+  },
+  "WinoGrande": {
+    "id": "WinoGrande",
+    "label": "指代与填空消歧",
+    "about": "通过句子语境区分两个候选对象，测试指代理解与常识。",
+    "input": "含空缺的句子和两个候选词或实体。",
+    "action": "选出能正确填入句子的对象。",
+    "group": "知识与推理",
+    "methodId": "WinoGrande"
+  },
+  "LoCoMo": {
+    "id": "LoCoMo",
+    "label": "长对话记忆问答",
+    "about": "测试能否从长对话中回忆人物、事件与跨轮信息，并识别无法回答的问题。",
+    "input": "长对话历史和后续问题。",
+    "action": "根据历史作答；信息不足时按规则拒答。",
+    "group": "长期记忆",
+    "methodId": "LoCoMo"
+  },
+  "LongMemEval-S": {
+    "id": "LongMemEval-S",
+    "label": "跨会话长期记忆",
+    "about": "测试跨会话事实回忆、时间推理、信息更新与偏好记忆。",
+    "input": "完整会话历史和当前问题。",
+    "action": "找到相关历史并回答，处理时间与信息变化。",
+    "group": "长期记忆",
+    "methodId": "LongMemEval-S"
+  },
+  "MemoryAgentBench": {
+    "id": "MemoryAgentBench",
+    "label": "多类记忆任务集合",
+    "about": "覆盖信息检索、冲突处理、长程理解和测试时学习，检查不同记忆使用方式。",
+    "input": "所选子任务的上下文和问题。",
+    "action": "按子任务要求检索、整合或更新信息；混合主分仅作覆盖诊断。",
+    "group": "长期记忆",
+    "methodId": "MemoryAgentBench"
+  },
+  "ANES": {
+    "id": "ANES",
+    "label": "美国全国选举研究",
+    "about": "美国全国选举研究中的真实受访者问卷。这里测试系统能否预测人的实际回答。",
+    "input": "调查问题与选项；按选定方法提供人物背景、本人历史回答或人群参照。",
+    "action": "选择这位受访者可能实际选择的选项，与其真实回答比较。",
+    "group": "人类问卷",
+    "methodId": "ANES"
+  },
+  "ATP": {
+    "id": "ATP",
+    "label": "美国趋势调查面板",
+    "about": "美国趋势调查面板中的真实受访者问卷。这里测试系统能否预测人的实际回答。",
+    "input": "调查问题与选项；按选定方法提供人物背景、本人历史回答或人群参照。",
+    "action": "选择这位受访者可能实际选择的选项，与其真实回答比较。",
+    "group": "人类问卷",
+    "methodId": "ATP"
+  },
+  "Afrobarometer": {
+    "id": "Afrobarometer",
+    "label": "非洲晴雨表",
+    "about": "非洲晴雨表中的真实受访者问卷。这里测试系统能否预测人的实际回答。",
+    "input": "调查问题与选项；按选定方法提供人物背景、本人历史回答或人群参照。",
+    "action": "选择这位受访者可能实际选择的选项，与其真实回答比较。",
+    "group": "人类问卷",
+    "methodId": "Afrobarometer"
+  },
+  "AmericasBarameters": {
+    "id": "AmericasBarameters",
+    "label": "美洲晴雨表",
+    "about": "美洲晴雨表中的真实受访者问卷。这里测试系统能否预测人的实际回答。",
+    "input": "调查问题与选项；按选定方法提供人物背景、本人历史回答或人群参照。",
+    "action": "选择这位受访者可能实际选择的选项，与其真实回答比较。",
+    "group": "人类问卷",
+    "methodId": "AmericasBarameters"
+  },
+  "ArabBarameter": {
+    "id": "ArabBarameter",
+    "label": "阿拉伯晴雨表",
+    "about": "阿拉伯晴雨表中的真实受访者问卷。这里测试系统能否预测人的实际回答。",
+    "input": "调查问题与选项；按选定方法提供人物背景、本人历史回答或人群参照。",
+    "action": "选择这位受访者可能实际选择的选项，与其真实回答比较。",
+    "group": "人类问卷",
+    "methodId": "ArabBarameter"
+  },
+  "AsiaBarometer": {
+    "id": "AsiaBarometer",
+    "label": "亚洲晴雨表",
+    "about": "亚洲晴雨表中的真实受访者问卷。这里测试系统能否预测人的实际回答。",
+    "input": "调查问题与选项；按选定方法提供人物背景、本人历史回答或人群参照。",
+    "action": "选择这位受访者可能实际选择的选项，与其真实回答比较。",
+    "group": "人类问卷",
+    "methodId": "AsiaBarometer"
+  },
+  "BSA": {
+    "id": "BSA",
+    "label": "英国社会态度调查",
+    "about": "英国社会态度调查中的真实受访者问卷。这里测试系统能否预测人的实际回答。",
+    "input": "调查问题与选项；按选定方法提供人物背景、本人历史回答或人群参照。",
+    "action": "选择这位受访者可能实际选择的选项，与其真实回答比较。",
+    "group": "人类问卷",
+    "methodId": "BSA"
+  },
+  "CGSS": {
+    "id": "CGSS",
+    "label": "中国综合社会调查",
+    "about": "中国综合社会调查中的真实受访者问卷。这里测试系统能否预测人的实际回答。",
+    "input": "调查问题与选项；按选定方法提供人物背景、本人历史回答或人群参照。",
+    "action": "选择这位受访者可能实际选择的选项，与其真实回答比较。",
+    "group": "人类问卷",
+    "methodId": "CGSS"
+  },
+  "CSES": {
+    "id": "CSES",
+    "label": "选举制度比较研究",
+    "about": "选举制度比较研究中的真实受访者问卷。这里测试系统能否预测人的实际回答。",
+    "input": "调查问题与选项；按选定方法提供人物背景、本人历史回答或人群参照。",
+    "action": "选择这位受访者可能实际选择的选项，与其真实回答比较。",
+    "group": "人类问卷",
+    "methodId": "CSES"
+  },
+  "CSS": {
+    "id": "CSS",
+    "label": "中国社会状况综合调查",
+    "about": "中国社会状况综合调查中的真实受访者问卷。这里测试系统能否预测人的实际回答。",
+    "input": "调查问题与选项；按选定方法提供人物背景、本人历史回答或人群参照。",
+    "action": "选择这位受访者可能实际选择的选项，与其真实回答比较。",
+    "group": "人类问卷",
+    "methodId": "CSS"
+  },
+  "ESS": {
+    "id": "ESS",
+    "label": "欧洲社会调查",
+    "about": "欧洲社会调查中的真实受访者问卷。这里测试系统能否预测人的实际回答。",
+    "input": "调查问题与选项；按选定方法提供人物背景、本人历史回答或人群参照。",
+    "action": "选择这位受访者可能实际选择的选项，与其真实回答比较。",
+    "group": "人类问卷",
+    "methodId": "ESS"
+  },
+  "EVS": {
+    "id": "EVS",
+    "label": "欧洲价值观研究",
+    "about": "欧洲价值观研究中的真实受访者问卷。这里测试系统能否预测人的实际回答。",
+    "input": "调查问题与选项；按选定方法提供人物背景、本人历史回答或人群参照。",
+    "action": "选择这位受访者可能实际选择的选项，与其真实回答比较。",
+    "group": "人类问卷",
+    "methodId": "EVS"
+  },
+  "GSS": {
+    "id": "GSS",
+    "label": "美国综合社会调查",
+    "about": "美国综合社会调查中的真实受访者问卷。这里测试系统能否预测人的实际回答。",
+    "input": "调查问题与选项；按选定方法提供人物背景、本人历史回答或人群参照。",
+    "action": "选择这位受访者可能实际选择的选项，与其真实回答比较。",
+    "group": "人类问卷",
+    "methodId": "GSS"
+  },
+  "ISSP": {
+    "id": "ISSP",
+    "label": "国际社会调查项目",
+    "about": "国际社会调查项目中的真实受访者问卷。这里测试系统能否预测人的实际回答。",
+    "input": "调查问题与选项；按选定方法提供人物背景、本人历史回答或人群参照。",
+    "action": "选择这位受访者可能实际选择的选项，与其真实回答比较。",
+    "group": "人类问卷",
+    "methodId": "ISSP"
+  },
+  "WVS": {
+    "id": "WVS",
+    "label": "世界价值观调查",
+    "about": "世界价值观调查中的真实受访者问卷。这里测试系统能否预测人的实际回答。",
+    "input": "调查问题与选项；按选定方法提供人物背景、本人历史回答或人群参照。",
+    "action": "选择这位受访者可能实际选择的选项，与其真实回答比较。",
+    "group": "人类问卷",
+    "methodId": "WVS"
+  },
+  "PNAS-dictator_give": {
+    "id": "PNAS-dictator_give",
+    "label": "独裁者博弈 · 分配",
+    "about": "真实人类行为博弈，用于比较系统与人的选择分布。决定100美元中给另一位参与者多少。",
+    "input": "相应博弈的规则和当前条件。",
+    "action": "决定100美元中给另一位参与者多少。 网站比较选择分布与人类参照的距离。",
+    "group": "行为博弈",
+    "methodId": "PNAS-dictator_give"
+  },
+  "PNAS-ultimatum_offer": {
+    "id": "PNAS-ultimatum_offer",
+    "label": "最后通牒 · 提议",
+    "about": "真实人类行为博弈，用于比较系统与人的选择分布。决定100美元中给对方多少。",
+    "input": "相应博弈的规则和当前条件。",
+    "action": "决定100美元中给对方多少。 网站比较选择分布与人类参照的距离。",
+    "group": "行为博弈",
+    "methodId": "PNAS-ultimatum_offer"
+  },
+  "PNAS-ultimatum_accept": {
+    "id": "PNAS-ultimatum_accept",
+    "label": "最后通牒 · 接受阈值",
+    "about": "真实人类行为博弈，用于比较系统与人的选择分布。给出接受对方提议的最低金额。",
+    "input": "相应博弈的规则和当前条件。",
+    "action": "给出接受对方提议的最低金额。 网站比较选择分布与人类参照的距离。",
+    "group": "行为博弈",
+    "methodId": "PNAS-ultimatum_accept"
+  },
+  "PNAS-trust_invest": {
+    "id": "PNAS-trust_invest",
+    "label": "信任博弈 · 投资",
+    "about": "真实人类行为博弈，用于比较系统与人的选择分布。决定把0–100美元中多少交给银行家，转移额会变为3倍。",
+    "input": "相应博弈的规则和当前条件。",
+    "action": "决定把0–100美元中多少交给银行家，转移额会变为3倍。 网站比较选择分布与人类参照的距离。",
+    "group": "行为博弈",
+    "methodId": "PNAS-trust_invest"
+  },
+  "PNAS-trust_return50": {
+    "id": "PNAS-trust_return50",
+    "label": "信任博弈 · 返还",
+    "about": "真实人类行为博弈，用于比较系统与人的选择分布。在收到50美元投资并增值为150后，决定返还多少。",
+    "input": "相应博弈的规则和当前条件。",
+    "action": "在收到50美元投资并增值为150后，决定返还多少。 网站比较选择分布与人类参照的距离。",
+    "group": "行为博弈",
+    "methodId": "PNAS-trust_return50"
+  },
+  "PNAS-bomb_boxes": {
+    "id": "PNAS-bomb_boxes",
+    "label": "炸弹风险任务",
+    "about": "真实人类行为博弈，用于比较系统与人的选择分布。100个箱子含1枚炸弹，决定同时打开多少个。",
+    "input": "相应博弈的规则和当前条件。",
+    "action": "100个箱子含1枚炸弹，决定同时打开多少个。 网站比较选择分布与人类参照的距离。",
+    "group": "行为博弈",
+    "methodId": "PNAS-bomb_boxes"
+  },
+  "PNAS-pgg_g4": {
+    "id": "PNAS-pgg_g4",
+    "label": "公共品博弈 · 4人",
+    "about": "真实人类行为博弈，用于比较系统与人的选择分布。每人20美元，4人组选择贡献额，总贡献按50%回报进入收益。",
+    "input": "相应博弈的规则和当前条件。",
+    "action": "每人20美元，4人组选择贡献额，总贡献按50%回报进入收益。 网站比较选择分布与人类参照的距离。",
+    "group": "行为博弈",
+    "methodId": "PNAS-pgg_g4"
+  },
+  "PNAS-pgg_g10": {
+    "id": "PNAS-pgg_g10",
+    "label": "公共品博弈 · 10人",
+    "about": "真实人类行为博弈，用于比较系统与人的选择分布。同样20美元及收益规则，在10人组选择贡献额。",
+    "input": "相应博弈的规则和当前条件。",
+    "action": "同样20美元及收益规则，在10人组选择贡献额。 网站比较选择分布与人类参照的距离。",
+    "group": "行为博弈",
+    "methodId": "PNAS-pgg_g10"
+  },
+  "Psych-101": {
+    "id": "Psych-101",
+    "label": "人类认知实验选择预测",
+    "about": "汇集真实人类认知实验，观察系统能否预测参与者接下来会作出的选择。",
+    "input": "实验说明、此前真实选择与反馈，以及当前刺激。",
+    "action": "预测该参与者下一次选择；本轮评分看与人类选择是否一致。",
+    "group": "心理实验",
+    "methodId": "Psych-101"
+  },
+  "FOS-T1": {
+    "id": "FOS-T1",
+    "label": "场所变化与行程重规划",
+    "about": "保持或改变目的地，并采用最新相关通知。",
+    "input": "开放/关闭通知、时段、候选场所类型和距离。",
+    "action": "保持或改变目的地，并采用最新相关通知。",
+    "group": "历史FOS",
+    "methodId": "FOS-T1"
+  },
+  "FOS-T2": {
+    "id": "FOS-T2",
+    "label": "家庭照料与记忆",
+    "about": "选对照料者，调整日程，并且费用只入账一次。",
+    "input": "照料通知、历史照料轮换、家庭日程和开销。",
+    "action": "选对照料者，调整日程，并且费用只入账一次。",
+    "group": "历史FOS",
+    "methodId": "FOS-T2"
+  },
+  "FOS-T3": {
+    "id": "FOS-T3",
+    "label": "团队审核与耦合约束",
+    "about": "审阅者通过消息要求修改，执行者产出合规最终文件。",
+    "input": "公开草稿、审阅者私有标准、跨字段联动限制。",
+    "action": "审阅者通过消息要求修改，执行者产出合规最终文件。",
+    "group": "历史FOS",
+    "methodId": "FOS-T3"
+  },
+  "FOS-T4": {
+    "id": "FOS-T4",
+    "label": "核验与多跳传播",
+    "about": "按可信来源、作用对象和版本决定最终状态。",
+    "input": "多个冲突来源、核验者私有可信表、派发者收件箱。",
+    "action": "按可信来源、作用对象和版本决定最终状态。",
+    "group": "历史FOS",
+    "methodId": "FOS-T4"
+  },
+  "FOS-T5": {
+    "id": "FOS-T5",
+    "label": "城市政策与权限",
+    "about": "居民判断政策是否约束自己并执行许可动作。",
+    "input": "正式政策或无约束力咨询稿、居民自身属性、执行生效时点。",
+    "action": "居民判断政策是否约束自己并执行许可动作。",
+    "group": "历史FOS",
+    "methodId": "FOS-T5"
+  },
+  "FOS-L1": {
+    "id": "FOS-L1",
+    "label": "中断与接替",
+    "about": "检查点→协调者交接→接替者从正确步骤继续。",
+    "input": "顺序工作步骤、材料、检查点以及工作者是否可继续。",
+    "action": "检查点→协调者交接→接替者从正确步骤继续。",
+    "group": "历史FOS",
+    "methodId": "FOS-L1"
+  },
+  "FOS-T6": {
+    "id": "FOS-T6",
+    "label": "分布式多跳QA",
+    "about": "研究者把缺失支持段落送给回答者。",
+    "input": "HotpotQA、2Wiki、MuSiQue的公开支持段落作为工作流载荷。",
+    "action": "研究者把缺失支持段落送给回答者。",
+    "group": "历史FOS",
+    "methodId": "FOS-T6"
+  },
+  "FOS-T7": {
+    "id": "FOS-T7",
+    "label": "数学答案核验中继",
+    "about": "检测“已验证”消息会帮助还是覆盖正确计算。",
+    "input": "GSM8K题目和多来源候选答案，核验者持有私有可信表。",
+    "action": "检测“已验证”消息会帮助还是覆盖正确计算。",
+    "group": "历史FOS",
+    "methodId": "FOS-T7"
+  },
+  "FOS-T8": {
+    "id": "FOS-T8",
+    "label": "多领域标准任务中继",
+    "about": "将标准知识、阅读、科学和QA问题作为核验工作流载荷。",
+    "input": "登记的多领域源题、正确选项或答案及具有迷惑性的候选来源。",
+    "action": "将标准知识、阅读、科学和QA问题作为核验工作流载荷。",
+    "group": "历史FOS",
+    "methodId": "FOS-T8"
+  },
+  "FOS-A19": {
+    "id": "FOS-A19",
+    "label": "记忆配置敏感性",
+    "about": "检查检索预算、干扰记录和查询措辞是否改变照料任务。",
+    "input": "同一24个T2实例、两个变体；clean、15/60干扰、top5预算、query phrase 五条件。",
+    "action": "检查检索预算、干扰记录和查询措辞是否改变照料任务。",
+    "group": "历史FOS",
+    "methodId": "FOS-A19"
+  },
+  "FOS-A9-spoof": {
+    "id": "FOS-A9-spoof",
+    "label": "发送者伪造攻击",
+    "about": "检查伪造的“已验证”消息是否会被采纳。",
+    "input": "T4同一实例中先交付真实核验消息，再投递声称来自verifier的新版本伪造值。",
+    "action": "检查伪造的“已验证”消息是否会被采纳。",
+    "group": "历史FOS",
+    "methodId": "FOS-A9-spoof"
+  },
+  "FOS-A9-stress": {
+    "id": "FOS-A9-stress",
+    "label": "通信并发压力",
+    "about": "检查消息组件的完整性和吞吐。",
+    "input": "10、100、1000个发送者，每个发送固定消息序列，无模型调用。",
+    "action": "检查消息组件的完整性和吞吐。",
+    "group": "历史FOS",
+    "methodId": "FOS-A9-stress"
+  },
+  "FOS-A9-audit": {
+    "id": "FOS-A9-audit",
+    "label": "平台机制审计",
+    "about": "查明平台原生支持、适配支持和缺失的机制。",
+    "input": "定向通信、情节记忆、私有存储/产物ACL、检查点恢复、环境政策事件、发送者认证六类机制。",
+    "action": "查明平台原生支持、适配支持和缺失的机制。",
+    "group": "历史FOS",
+    "methodId": "FOS-A9-audit"
+  },
+  "FOS-H2": {
+    "id": "FOS-H2",
+    "label": "行为分布与人类噪声下界",
+    "about": "比较模型/人设行为分布与真实人类参照。",
+    "input": "固定博弈协议、104次行动抽样、历史模型与人设条件。",
+    "action": "比较模型/人设行为分布与真实人类参照。",
+    "group": "历史FOS",
+    "methodId": "FOS-H2"
+  },
+  "FOS-H3": {
+    "id": "FOS-H3",
+    "label": "信任历史反应",
+    "about": "看第一次返还经历如何改变第二轮信任投资。",
+    "input": "真实第一轮投资、返还及其后同人的第二轮人类投资；agent只看此前历史。",
+    "action": "看第一次返还经历如何改变第二轮信任投资。",
+    "group": "历史FOS",
+    "methodId": "FOS-H3"
+  },
+  "FOS-H7-PD": {
+    "id": "FOS-H7-PD",
+    "label": "互惠反应",
+    "about": "测量伙伴上一轮合作/背叛对下一轮合作的影响。",
+    "input": "Push/Pull五轮博弈的真实第一轮历史及第二轮选择。",
+    "action": "测量伙伴上一轮合作/背叛对下一轮合作的影响。",
+    "group": "历史FOS",
+    "methodId": "FOS-H7-PD"
+  },
+  "FOS-H7-PGG": {
+    "id": "FOS-H7-PGG",
+    "label": "公共品组规模反应",
+    "about": "比较群体从4人变为10人时贡献变化是否接近人类。",
+    "input": "相同20美元禀赋和收益规则的4人/10人条件。",
+    "action": "比较群体从4人变为10人时贡献变化是否接近人类。",
+    "group": "历史FOS",
+    "methodId": "FOS-H7-PGG"
+  },
+  "FOS-RQ3": {
+    "id": "FOS-RQ3",
+    "label": "两条轴是否同向",
+    "about": "检查任务能力和人类距离是否在已测配置间共变。",
+    "input": "历史模型 × 人设配置的功能FullPass及H2超额距离。",
+    "action": "检查任务能力和人类距离是否在已测配置间共变。",
+    "group": "历史FOS",
+    "methodId": "FOS-RQ3"
+  },
+  "GAIA": {
+    "id": "GAIA",
+    "label": "真实工具与网页任务",
+    "about": "用需要工具、网页或多模态信息的问题，评估实际任务解决能力。",
+    "input": "正式数据及可用工具环境；当前尚未接入。",
+    "action": "实际使用所需工具完成问题；当前没有此项成绩。",
+    "group": "待接入",
+    "methodId": "GAIA"
+  },
+  "BrowseComp-browsing": {
+    "id": "BrowseComp-browsing",
+    "label": "自主搜索与网页研究",
+    "about": "测试能否通过搜索与阅读网页解决困难研究问题。",
+    "input": "研究问题和真实搜索、网页工具。",
+    "action": "自行查找、整合证据并回答；当前尚未接入。",
+    "group": "待接入",
+    "methodId": "BrowseComp-browsing"
+  }
+}
