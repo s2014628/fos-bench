@@ -1,0 +1,2702 @@
+{
+  "badham2017deficits/exp1.csv": {
+    "labelEn": "Geometric category learning",
+    "questionTypes": {
+      "zh": [
+        "几何图形分类学习",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Geometric category learning",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "通过反馈学习图形的分类规则，并在规则改变后继续分类。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Learn changing category rules from feedback. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "此前大白方块被判为C；现在看到一个小黑三角。预测参与者会按哪个分类键？",
+        "en": "A large white square was labeled C earlier; now a small black triangle appears. Predict the next category key."
+      },
+      "output": {
+        "zh": "N（反应形式示意）",
+        "en": "N (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "bahrami2020four/exp.csv": {
+    "labelEn": "Four-option reward learning",
+    "questionTypes": {
+      "zh": [
+        "四选项奖赏学习",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Four-option reward learning",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "反复从四个选项中选择，利用所得分数学习哪些选项更有利。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Learn rewards by repeatedly choosing among four options. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "四个选项E/X/O/S；此前E得3分，O得5分。预测下一次选择。",
+        "en": "Options are E/X/O/S; earlier E yielded 3 and O yielded 5. Predict the next choice."
+      },
+      "output": {
+        "zh": "O（反应形式示意）",
+        "en": "O (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "collsiöö2023MCPL/exp1.csv": {
+    "labelEn": "Multi-cue concentration estimation",
+    "questionTypes": {
+      "zh": [
+        "多线索数值与等级估计",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Multi-cue concentration estimation",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "根据两种激素的线索，学习估计第三种激素的浓度；部分阶段不再给反馈。本条件用数值线索并输出数值浓度。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Learn how two cues predict a third hormone concentration. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "两项激素线索为2和3；此前反馈用于学习对应关系。预测当前浓度估计。",
+        "en": "Two hormone cues are 2 and 3; earlier feedback informs their relationship. Predict the concentration estimate."
+      },
+      "output": {
+        "zh": "40（反应形式示意）",
+        "en": "40 (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "collsiöö2023MCPL/exp2.csv": {
+    "labelEn": "Multi-cue concentration estimation",
+    "questionTypes": {
+      "zh": [
+        "多线索数值与等级估计",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Multi-cue concentration estimation",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "根据两种激素的线索，学习估计第三种激素的浓度；部分阶段不再给反馈。本条件用数值线索并输出文字等级。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Learn how two cues predict a third hormone concentration. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "两项激素线索为2和3；此前反馈用于学习对应关系。预测当前浓度估计。",
+        "en": "Two hormone cues are 2 and 3; earlier feedback informs their relationship. Predict the concentration estimate."
+      },
+      "output": {
+        "zh": "low（反应形式示意）",
+        "en": "low (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "collsiöö2023MCPL/exp3.csv": {
+    "labelEn": "Multi-cue concentration estimation",
+    "questionTypes": {
+      "zh": [
+        "多线索数值与等级估计",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Multi-cue concentration estimation",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "根据两种激素的线索，学习估计第三种激素的浓度；部分阶段不再给反馈。本条件用文字等级线索并输出文字等级。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Learn how two cues predict a third hormone concentration. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "两项激素线索为“很少”和“少”；预测第三种激素的文字等级。",
+        "en": "The hormone cues are “very little” and “a little”; predict the third hormone’s verbal level."
+      },
+      "output": {
+        "zh": "low（反应形式示意）",
+        "en": "low (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "cox2017information/exp1.csv": {
+    "labelEn": "Word-list recognition",
+    "questionTypes": {
+      "zh": [
+        "词表记忆识别",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Word-list recognition",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "学习一组词语后，判断当前单词是否出现在此前词表中。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Recognize whether a presented word appeared in a studied list. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "学习词表包含apple、river。随后出现river，预测参与者的识别按键。",
+        "en": "The studied list includes apple and river. River appears next; predict the recognition key."
+      },
+      "output": {
+        "zh": "K（反应形式示意）",
+        "en": "K (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "enkavi2019adaptivenback/exp1.csv": {
+    "labelEn": "Adaptive N-back memory",
+    "questionTypes": {
+      "zh": [
+        "自适应 N-back 记忆",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Adaptive N-back memory",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "记住连续字母并判断当前字母是否与 N 步前相同，N 随表现变化。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Judge whether the current letter matches the one N steps earlier. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "N=2，先前字母为A、B，当前出现A。预测参与者的匹配按键。",
+        "en": "N=2; previous letters are A, B; A now appears. Predict the matching key."
+      },
+      "output": {
+        "zh": "K（反应形式示意）",
+        "en": "K (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "enkavi2019digitspan/exp1.csv": {
+    "labelEn": "Digit-span recall",
+    "questionTypes": {
+      "zh": [
+        "数字序列回忆",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Digit-span recall",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "短暂记住数字序列，再按原顺序回忆。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Recall a digit sequence in order, then mark the end. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "记忆序列为3、1、8；此前已回忆3和1。预测下一次输出。",
+        "en": "The sequence is 3, 1, 8; 3 and 1 have already been recalled. Predict the next output."
+      },
+      "output": {
+        "zh": "8（反应形式示意）",
+        "en": "8 (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "enkavi2019gonogo/exp1.csv": {
+    "labelEn": "Go/no-go response control",
+    "questionTypes": {
+      "zh": [
+        "Go/No-go 反应控制",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Go/no-go response control",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "看到指定颜色要按键，另一种颜色则不作反应。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Respond to one stimulus and withhold a response to another. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "规则：颜色1按X，颜色2不按键。当前看到颜色2，预测反应。",
+        "en": "Rule: press X for color 1; withhold for color 2. Color 2 appears. Predict the response."
+      },
+      "output": {
+        "zh": "nothing（反应形式示意）",
+        "en": "nothing (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "enkavi2019recentprobes/exp1.csv": {
+    "labelEn": "Recent-letter memory probe",
+    "questionTypes": {
+      "zh": [
+        "近期字母记忆探测",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Recent-letter memory probe",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "记住最近呈现的六个字母，再判断探测字母是否属于这组。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Judge whether a probe belongs to the most recent letter set. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "最近一组字母为F/P/V/Q/G/L；探测字母是T。预测成员判断键。",
+        "en": "The recent set is F/P/V/Q/G/L; the probe is T. Predict the membership-response key."
+      },
+      "output": {
+        "zh": "L（反应形式示意）",
+        "en": "L (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "feng2021dynamics/exp1.csv": {
+    "labelEn": "Exploration with limited opportunities",
+    "questionTypes": {
+      "zh": [
+        "探索与利用选择",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Exploration with limited opportunities",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "先观察指定机器的奖励，再在剩余轮次中自行选择两台机器之一。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose between machines after observing initial rewards. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "先观察A得58分、R得25分；本局还有6次自由选择。预测下一次按键。",
+        "en": "Initial observations: A yields 58 and R yields 25; six free choices remain. Predict the next key."
+      },
+      "output": {
+        "zh": "A（反应形式示意）",
+        "en": "A (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "flesch2018comparing/exp1.csv": {
+    "labelEn": "Context-dependent tree classification",
+    "questionTypes": {
+      "zh": [
+        "情境规则与树木分类",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Context-dependent tree classification",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "学习不同花园适合哪类树，判断是否接受种植。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Learn which tree features fit each garden. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "北花园中出现叶量4、枝量1的树；此前反馈已给出部分规则。预测接受或拒绝。",
+        "en": "A tree with leafiness 4 and branchiness 1 appears in the North garden; prior feedback provides partial rules. Predict accept or reject."
+      },
+      "output": {
+        "zh": "I（反应形式示意）",
+        "en": "I (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "frey2017cct/exp1.csv": {
+    "labelEn": "Card-turning risk and stopping",
+    "questionTypes": {
+      "zh": [
+        "翻牌风险与停止决策",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Card-turning risk and stopping",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "继续翻牌可能获得奖励，也可能遇到损失牌结束本轮。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Decide whether to turn another card or stop with accumulated gains. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "32张牌中有损失牌；已翻到几张获奖牌。预测继续翻牌G或停止L。",
+        "en": "Some of 32 cards are loss cards; several gain cards have been revealed. Predict continue G or stop L."
+      },
+      "output": {
+        "zh": "L（反应形式示意）",
+        "en": "L (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "frey2017risk/exp1.csv": {
+    "labelEn": "Balloon risk-taking",
+    "questionTypes": {
+      "zh": [
+        "气球充气风险",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Balloon risk-taking",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "每次充气增加收益，但气球爆炸会失去当前收益。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Trade off further pumping against cashing out before an explosion. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "气球已充气8次并积累8分。预测继续充气N还是停止兑现X。",
+        "en": "A balloon has been pumped eight times for eight points. Predict pump N or cash out X."
+      },
+      "output": {
+        "zh": "X（反应形式示意）",
+        "en": "X (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "garcia2023experiential/exp1.csv": {
+    "labelEn": "Experience and described-probability decisions",
+    "questionTypes": {
+      "zh": [
+        "经验与概率描述决策",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Experience and described-probability decisions",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "先体验选项收益，再比较经验选项与概率描述，并估计获奖机会。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Compare learned options with stated probabilities and estimate outcomes. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "经历过Y选项若干收益后，出现一个明确写出获奖概率的J选项。预测下一次选择。",
+        "en": "After experiencing rewards from Y, option J appears with an explicit win probability. Predict the next choice."
+      },
+      "output": {
+        "zh": "J（反应形式示意）",
+        "en": "J (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "garcia2023experiential/exp2.csv": {
+    "labelEn": "Experience and described-probability decisions",
+    "questionTypes": {
+      "zh": [
+        "经验与概率描述决策",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Experience and described-probability decisions",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "先体验选项收益，再比较经验选项与概率描述，并估计获奖机会。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Compare learned options with stated probabilities and estimate outcomes. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "经历过Y选项若干收益后，出现一个明确写出获奖概率的J选项。预测下一次选择。",
+        "en": "After experiencing rewards from Y, option J appears with an explicit win probability. Predict the next choice."
+      },
+      "output": {
+        "zh": "J（反应形式示意）",
+        "en": "J (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "garcia2023experiential/exp3.csv": {
+    "labelEn": "Experience and described-probability decisions",
+    "questionTypes": {
+      "zh": [
+        "经验与概率描述决策",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Experience and described-probability decisions",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "先体验选项收益，再比较经验选项与概率描述，并估计获奖机会。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Compare learned options with stated probabilities and estimate outcomes. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "经历过Y选项若干收益后，出现一个明确写出获奖概率的J选项。预测下一次选择。",
+        "en": "After experiencing rewards from Y, option J appears with an explicit win probability. Predict the next choice."
+      },
+      "output": {
+        "zh": "J（反应形式示意）",
+        "en": "J (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "garcia2023experiential/exp4.csv": {
+    "labelEn": "Experience and described-probability decisions",
+    "questionTypes": {
+      "zh": [
+        "经验与概率描述决策",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Experience and described-probability decisions",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "先体验选项收益，再比较经验选项与概率描述，并估计获奖机会。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Compare learned options with stated probabilities and estimate outcomes. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "经历过Y选项若干收益后，出现一个明确写出获奖概率的J选项。预测下一次选择。",
+        "en": "After experiencing rewards from Y, option J appears with an explicit win probability. Predict the next choice."
+      },
+      "output": {
+        "zh": "J（反应形式示意）",
+        "en": "J (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "gershman2018deconstructing/exp1.csv": {
+    "labelEn": "Two-option reward and risk learning",
+    "questionTypes": {
+      "zh": [
+        "两选项奖赏与风险学习",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Two-option reward and risk learning",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在两台机器之间作选择，根据得到的分数学习收益。本条件中一台机器固定给 0 分。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Learn rewards while choosing between safe or uncertain machines. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "机器T收益波动，机器Y固定0分（条件1说明）；预测下一次选择。",
+        "en": "T has variable rewards and Y always gives zero (condition 1 illustration). Predict the next choice."
+      },
+      "output": {
+        "zh": "T（反应形式示意）",
+        "en": "T (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "gershman2018deconstructing/exp2.csv": {
+    "labelEn": "Two-option reward and risk learning",
+    "questionTypes": {
+      "zh": [
+        "两选项奖赏与风险学习",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Two-option reward and risk learning",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在两台机器之间作选择，根据得到的分数学习收益。本条件中两台机器的收益均会波动。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Learn rewards while choosing between safe or uncertain machines. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "两台机器的收益都波动，已有若干奖惩反馈。预测下一次选择。",
+        "en": "Both machines have variable rewards; prior feedback is given. Predict the next choice."
+      },
+      "output": {
+        "zh": "I（反应形式示意）",
+        "en": "I (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "gershman2020reward/exp1.csv": {
+    "labelEn": "Stimulus–response association learning",
+    "questionTypes": {
+      "zh": [
+        "刺激与按键对应学习",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Stimulus–response association learning",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "通过正确或错误反馈，学习不同刺激分别对应哪个按键。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Learn which of three keys is correct for each stimulus. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "此前刺激1按I获得1分；现在再次出现刺激1。预测下一次按键。",
+        "en": "Earlier, pressing I for stimulus 1 yielded one point. Stimulus 1 appears again. Predict the key."
+      },
+      "output": {
+        "zh": "I（反应形式示意）",
+        "en": "I (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "hebart2023things/exp1.csv": {
+    "labelEn": "Object similarity judgment",
+    "questionTypes": {
+      "zh": [
+        "物体相似性判断",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Object similarity judgment",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "从三个物体中选出与另外两个最不相似的一个。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose the object least similar to the other two. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "三个物体分别对应按键：T=瓶子，Z=杯子，R=汽车。预测参与者选择“最不同”的物体时会按哪个键。",
+        "en": "Object keys: T=bottle, Z=cup, R=car. Predict the key pressed for the odd one out."
+      },
+      "output": {
+        "zh": "R（反应形式示意）",
+        "en": "R (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "hilbig2014generalized/exp1.csv": {
+    "labelEn": "Expert-cue integration",
+    "questionTypes": {
+      "zh": [
+        "专家线索整合",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Expert-cue integration",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "参考可信度不同的专家评分，判断两个产品哪一个质量更高。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Infer product quality from experts with different validities. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "产品P和G得到四位专家不同的0/1评分；专家可信度从高到低排序。预测产品选择。",
+        "en": "Products P and G receive binary ratings from four experts, ordered by validity. Predict the product choice."
+      },
+      "output": {
+        "zh": "P（反应形式示意）",
+        "en": "P (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "jansen2021dunningkruger/exp1.csv": {
+    "labelEn": "Grammar performance and self-assessment",
+    "questionTypes": {
+      "zh": [
+        "语法作答与表现自评",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Grammar performance and self-assessment",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "完成语法问题并估计自己能答对多少，观察实际作答与自我判断。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Answer grammar items and estimate personal performance. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "开始20道语法题之前，问“你预计答对多少道？”预测自评数值。",
+        "en": "Before 20 grammar questions, ask “How many will you answer correctly?” Predict the self-assessment."
+      },
+      "output": {
+        "zh": "15（反应形式示意）",
+        "en": "15 (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "kool2017cost/exp1.csv": {
+    "labelEn": "Two-stage choices with reward multipliers",
+    "questionTypes": {
+      "zh": [
+        "奖励倍增下的两阶段决策",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Two-stage choices with reward multipliers",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在寻宝任务中，当前是否存在奖励倍增会改变选择的收益。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose actions while accounting for whether treasure rewards are multiplied. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "当前有5倍奖励，飞船W/K的转移和历史收益已给出。预测下一步选择。",
+        "en": "A 5× reward multiplier is active; W/K transition and reward history is given. Predict the next choice."
+      },
+      "output": {
+        "zh": "W（反应形式示意）",
+        "en": "W (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "kool2017cost/exp2.csv": {
+    "labelEn": "Two-stage choices with reward multipliers",
+    "questionTypes": {
+      "zh": [
+        "奖励倍增下的两阶段决策",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Two-stage choices with reward multipliers",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在寻宝任务中，当前是否存在奖励倍增会改变选择的收益。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose actions while accounting for whether treasure rewards are multiplied. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "当前有5倍奖励，飞船W/K的转移和历史收益已给出。预测下一步选择。",
+        "en": "A 5× reward multiplier is active; W/K transition and reward history is given. Predict the next choice."
+      },
+      "output": {
+        "zh": "W（反应形式示意）",
+        "en": "W (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "kool2016when/exp1.csv": {
+    "labelEn": "Two-stage space-treasure decisions",
+    "questionTypes": {
+      "zh": [
+        "两阶段寻宝决策",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Two-stage space-treasure decisions",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "先选择飞船前往星球，再依据经历选择有利的寻宝行动。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose a spaceship and subsequent actions using transition and reward history. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "飞船V/X通向不同星球；此前寻宝收益不同。预测当前选择飞船的按键。",
+        "en": "Spaceships V/X lead to planets with different observed rewards. Predict the current spaceship key."
+      },
+      "output": {
+        "zh": "V（反应形式示意）",
+        "en": "V (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "kool2016when/exp2.csv": {
+    "labelEn": "Two-stage space-treasure decisions",
+    "questionTypes": {
+      "zh": [
+        "两阶段寻宝决策",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Two-stage space-treasure decisions",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "先选择飞船前往星球，再依据经历选择有利的寻宝行动。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose a spaceship and subsequent actions using transition and reward history. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "飞船V/X通向不同星球；此前寻宝收益不同。预测当前选择飞船的按键。",
+        "en": "Spaceships V/X lead to planets with different observed rewards. Predict the current spaceship key."
+      },
+      "output": {
+        "zh": "V（反应形式示意）",
+        "en": "V (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "krueger2022identifying/exp1.csv": {
+    "labelEn": "Costly information search",
+    "questionTypes": {
+      "zh": [
+        "付费信息搜集与赌博选择",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Costly information search",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "选择赌局前可付费查询收益，需决定查询多少信息以及何时作最终选择。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Decide which payoff information to buy and when to select a gamble. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "六个赌局收益尚未全知，每查一项扣2分。预测继续查询某颜色收益还是停止选赌局。",
+        "en": "Six gamble payoffs are not fully known; each query costs two points. Predict a payoff query or stopping to choose."
+      },
+      "output": {
+        "zh": "O（当前按键形式示意）",
+        "en": "O (illustrative current key)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "kumar2023disentangling/exp1.csv": {
+    "labelEn": "Grid-pattern exploration",
+    "questionTypes": {
+      "zh": [
+        "网格模式探索",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Grid-pattern exploration",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在隐藏的网格中寻找更多 1，利用已揭示位置推断其余图案。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Reveal unknown grid cells to find ones while avoiding zeros. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "7×7网格中少数位置已显露0或1，其他为X。预测下一个未揭示坐标。",
+        "en": "A 7×7 grid has some revealed zeros and ones; other cells are X. Predict the next unrevealed coordinate."
+      },
+      "output": {
+        "zh": "[2, 3]（反应形式示意）",
+        "en": "[2, 3] (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "lefebvre2017behavioural/exp1.csv": {
+    "labelEn": "Context-specific reward learning",
+    "questionTypes": {
+      "zh": [
+        "不同情境中的奖赏学习",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Context-specific reward learning",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在四个赌场反复选择机器，学习各情境中的收益。结果为 0 或 0.5 分。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Learn machine rewards separately across casinos. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "当前进入赌场4，可选机器Y/J；已有几次该赌场的收益记录。预测下一次选择。",
+        "en": "Casino 4 offers Y/J; earlier outcomes from that casino are available. Predict the next choice."
+      },
+      "output": {
+        "zh": "Y（反应形式示意）",
+        "en": "Y (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "lefebvre2017behavioural/exp2.csv": {
+    "labelEn": "Context-specific reward learning",
+    "questionTypes": {
+      "zh": [
+        "不同情境中的奖赏学习",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Context-specific reward learning",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在四个赌场反复选择机器，学习各情境中的收益。结果为 −0.5 或 0.5 分。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Learn machine rewards separately across casinos. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "当前进入赌场4，可选机器Y/J；已有几次该赌场的收益记录。预测下一次选择。",
+        "en": "Casino 4 offers Y/J; earlier outcomes from that casino are available. Predict the next choice."
+      },
+      "output": {
+        "zh": "Y（反应形式示意）",
+        "en": "Y (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "levering2020revisiting/exp1.csv": {
+    "labelEn": "Category learning and typicality",
+    "questionTypes": {
+      "zh": [
+        "图形分类与典型性判断",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Category learning and typicality",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "学习由形状、大小与颜色决定的分类规则，并评价物体有多典型。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Classify objects and, at test, rate how typical they are. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "物体编码221表示三项特征；历史分类反馈已给出。预测当前类别选择。",
+        "en": "Object code 221 specifies three features; past classification feedback is supplied. Predict the category choice."
+      },
+      "output": {
+        "zh": "Q（反应形式示意）",
+        "en": "Q (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "levering2020revisiting/exp2.csv": {
+    "labelEn": "Category learning and typicality",
+    "questionTypes": {
+      "zh": [
+        "图形分类与典型性判断",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Category learning and typicality",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "学习由形状、大小与颜色决定的分类规则，并评价物体有多典型。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Classify objects and, at test, rate how typical they are. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "物体编码221表示三项特征；历史分类反馈已给出。预测当前类别选择。",
+        "en": "Object code 221 specifies three features; past classification feedback is supplied. Predict the category choice."
+      },
+      "output": {
+        "zh": "Q（反应形式示意）",
+        "en": "Q (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "ludwig2023human/exp0.csv": {
+    "labelEn": "Goal-dependent route choices",
+    "questionTypes": {
+      "zh": [
+        "目标变化与路径选择",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Goal-dependent route choices",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "根据动物对营养的不同偏好，在市场中规划路径选择水果。动物以随机顺序出现。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose paths to fruits whose nutrients match changing animal preferences. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "当前动物偏好[-1,1]，市场两条路径有不同营养水果。本示例按W向左、H向右，预测下一次按键。",
+        "en": "The animal prefers [-1,1]; market paths lead to different nutrients. In this illustration W goes left and H goes right. Predict the next key."
+      },
+      "output": {
+        "zh": "W（反应形式示意）",
+        "en": "W (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "ludwig2023human/exp1.csv": {
+    "labelEn": "Goal-dependent route choices",
+    "questionTypes": {
+      "zh": [
+        "目标变化与路径选择",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Goal-dependent route choices",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "根据动物对营养的不同偏好，在市场中规划路径选择水果。动物以分块顺序出现。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose paths to fruits whose nutrients match changing animal preferences. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "当前动物偏好[-1,1]，市场两条路径有不同营养水果。本示例按A向左、I向右，预测下一次按键。",
+        "en": "The animal prefers [-1,1]; market paths lead to different nutrients. In this illustration A goes left and I goes right. Predict the next key."
+      },
+      "output": {
+        "zh": "A（反应形式示意）",
+        "en": "A (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "ludwig2023human/exp2.csv": {
+    "labelEn": "Goal-dependent route choices",
+    "questionTypes": {
+      "zh": [
+        "目标变化与路径选择",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Goal-dependent route choices",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "根据动物对营养的不同偏好，在市场中规划路径选择水果。动物以交替顺序出现。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose paths to fruits whose nutrients match changing animal preferences. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "当前动物偏好[-1,1]，市场两条路径有不同营养水果。本示例按T向左、F向右，预测下一次按键。",
+        "en": "The animal prefers [-1,1]; market paths lead to different nutrients. In this illustration T goes left and F goes right. Predict the next key."
+      },
+      "output": {
+        "zh": "T（反应形式示意）",
+        "en": "T (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "peterson2021using/exp1.csv": {
+    "labelEn": "Gambling with varying feedback",
+    "questionTypes": {
+      "zh": [
+        "带不同反馈的赌博决策",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Gambling with varying feedback",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在两种赌博选项中选择，有些问题提供收益反馈，有些不提供。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose lotteries with different outcomes, probabilities and feedback conditions. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "选项P几乎总损失5分，U有多种收益结果。题目列出概率；预测参与者选P或U。",
+        "en": "P almost always loses five points; U has several possible outcomes. Probabilities are listed. Predict P or U."
+      },
+      "output": {
+        "zh": "U（反应形式示意）",
+        "en": "U (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "plonsky2018when/exp1.csv": {
+    "labelEn": "Repeated gambling with feedback",
+    "questionTypes": {
+      "zh": [
+        "重复赌博与反馈学习",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Repeated gambling with feedback",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "同一赌博问题重复出现，早期不给反馈，后续提供两个选项的结果。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose repeated lottery problems as outcome feedback becomes available. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "同一赌局前5次无反馈，后续可见两选项结果。根据已给历史预测下一次选择。",
+        "en": "A repeated gamble has no feedback for five trials, then reveals both outcomes. Predict the next choice from the supplied history."
+      },
+      "output": {
+        "zh": "H（反应形式示意）",
+        "en": "H (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "popov2023intent/exp1.csv": {
+    "labelEn": "Directed memory and later recall",
+    "questionTypes": {
+      "zh": [
+        "定向记忆与干扰后回忆",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Directed memory and later recall",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "按提示记住指定词语，中间完成算术任务，再回忆记住的内容。本条件学习词语对。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Remember indicated words while doing judgments and an intervening arithmetic task. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "词对lamp/tank带记忆标记；当前要求判断左侧物体是否更大。预测按键。",
+        "en": "The pair lamp/tank has a memory cue; currently judge whether the left object is larger. Predict the key."
+      },
+      "output": {
+        "zh": "F（反应形式示意）",
+        "en": "F (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "popov2023intent/exp2.csv": {
+    "labelEn": "Directed memory and later recall",
+    "questionTypes": {
+      "zh": [
+        "定向记忆与干扰后回忆",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Directed memory and later recall",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "按提示记住指定词语，中间完成算术任务，再回忆记住的内容。本条件学习单个词语。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Remember indicated words while doing judgments and an intervening arithmetic task. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "记忆词语spider；当前要求判断其是否比足球更大。预测按键。",
+        "en": "Study the word spider; currently judge whether it is larger than a football. Predict the key."
+      },
+      "output": {
+        "zh": "H（反应形式示意）",
+        "en": "H (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "popov2023intent/exp3.csv": {
+    "labelEn": "Directed memory and later recall",
+    "questionTypes": {
+      "zh": [
+        "定向记忆与干扰后回忆",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Directed memory and later recall",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "按提示记住指定词语，中间完成算术任务，再回忆记住的内容。本条件学习词语对。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Remember indicated words while doing judgments and an intervening arithmetic task. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "词对lamp/tank带记忆标记；当前按T表示左侧更大、O表示更小。预测大小判断按键。",
+        "en": "The pair lamp/tank has a memory cue; T means the left object is larger and O means smaller. Predict the judgment key."
+      },
+      "output": {
+        "zh": "O（反应形式示意）",
+        "en": "O (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "ruggeri2022globalizability/exp1.csv": {
+    "labelEn": "Intertemporal gain and loss choice",
+    "questionTypes": {
+      "zh": [
+        "收益与损失的跨期选择",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Intertemporal gain and loss choice",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在不同时间收到或支付不同金额之间作选择，观察跨期偏好。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose between receiving or paying different amounts at different times. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "选项Q：现在收500美元；L：一年后收600美元。预测时间偏好选择。",
+        "en": "Q: receive $500 now; L: receive $600 in one year. Predict the time-preference choice."
+      },
+      "output": {
+        "zh": "L（反应形式示意）",
+        "en": "L (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "sadeghiyeh2020temporal/exp1.csv": {
+    "labelEn": "Finite-horizon exploration",
+    "questionTypes": {
+      "zh": [
+        "有限轮次下的探索选择",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Finite-horizon exploration",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "先观察机器的收益，再在有限剩余轮次中选择以争取更多奖励。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Use initial rewards and remaining choices to choose machines. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "V与N的部分收益已观察，本局只剩1次自由选择。预测下一台机器。",
+        "en": "Some rewards from V and N are observed; one free choice remains. Predict the next machine."
+      },
+      "output": {
+        "zh": "V（反应形式示意）",
+        "en": "V (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "schulz2020finding/exp1.csv": {
+    "labelEn": "Eight-option reward exploration",
+    "questionTypes": {
+      "zh": [
+        "多选项奖励探索",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Eight-option reward exploration",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "每局在八个选项中学习收益，局间收益重新变化。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Explore eight reward options across resetting rounds. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "本局选项1–8，已观察2得40分、5得10分。预测下一次选择。",
+        "en": "Options are 1–8; option 2 has yielded 40 and option 5 has yielded 10. Predict the next choice."
+      },
+      "output": {
+        "zh": "2（反应形式示意）",
+        "en": "2 (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "schulz2020finding/exp2.csv": {
+    "labelEn": "Eight-option reward exploration",
+    "questionTypes": {
+      "zh": [
+        "多选项奖励探索",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Eight-option reward exploration",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "每局在八个选项中学习收益，局间收益重新变化。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Explore eight reward options across resetting rounds. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "本局选项1–8，已观察2得40分、5得10分。预测下一次选择。",
+        "en": "Options are 1–8; option 2 has yielded 40 and option 5 has yielded 10. Predict the next choice."
+      },
+      "output": {
+        "zh": "2（反应形式示意）",
+        "en": "2 (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "schulz2020finding/exp3.csv": {
+    "labelEn": "Eight-option reward exploration",
+    "questionTypes": {
+      "zh": [
+        "多选项奖励探索",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Eight-option reward exploration",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "每局在八个选项中学习收益，局间收益重新变化。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Explore eight reward options across resetting rounds. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "本局选项1–8，已观察2得40分、5得10分。预测下一次选择。",
+        "en": "Options are 1–8; option 2 has yielded 40 and option 5 has yielded 10. Predict the next choice."
+      },
+      "output": {
+        "zh": "2（反应形式示意）",
+        "en": "2 (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "schulz2020finding/exp4.csv": {
+    "labelEn": "Eight-option reward exploration",
+    "questionTypes": {
+      "zh": [
+        "多选项奖励探索",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Eight-option reward exploration",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "每局在八个选项中学习收益，局间收益重新变化。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Explore eight reward options across resetting rounds. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "本局选项1–8，已观察2得40分、5得10分。预测下一次选择。",
+        "en": "Options are 1–8; option 2 has yielded 40 and option 5 has yielded 10. Predict the next choice."
+      },
+      "output": {
+        "zh": "2（反应形式示意）",
+        "en": "2 (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "schulz2020finding/exp5.csv": {
+    "labelEn": "Eight-option reward exploration",
+    "questionTypes": {
+      "zh": [
+        "多选项奖励探索",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Eight-option reward exploration",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "每局在八个选项中学习收益，局间收益重新变化。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Explore eight reward options across resetting rounds. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "本局选项1–8，已观察2得40分、5得10分。预测下一次选择。",
+        "en": "Options are 1–8; option 2 has yielded 40 and option 5 has yielded 10. Predict the next choice."
+      },
+      "output": {
+        "zh": "2（反应形式示意）",
+        "en": "2 (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "somerville2017charting/exp1.csv": {
+    "labelEn": "Exploration and exploitation",
+    "questionTypes": {
+      "zh": [
+        "探索与利用选择",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Exploration and exploitation",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在观察指定机器收益后，根据有限的自由选择机会作决定。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose machines after initial forced observations. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "机器P/A的初始反馈已给出，本局还剩若干自由选择。预测下一个按键。",
+        "en": "Initial forced observations for P/A are supplied; some free choices remain. Predict the next key."
+      },
+      "output": {
+        "zh": "A（反应形式示意）",
+        "en": "A (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "speekenbrink2008learning/exp1.csv": {
+    "labelEn": "Weather-prediction category learning",
+    "questionTypes": {
+      "zh": [
+        "概率分类与天气预测",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Weather-prediction category learning",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "学习卡片组合和天气之间的关系，判断当前组合预示哪种天气。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Learn how card combinations predict rainy or fine weather. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "当前卡片组合为2、3、4；此前几组组合的天气反馈已给出。预测下雨W或晴天J。",
+        "en": "The current card combination is 2,3,4; earlier combinations and weather feedback are given. Predict rain W or fine J."
+      },
+      "output": {
+        "zh": "W（反应形式示意）",
+        "en": "W (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "steingroever2015data/exp1.csv": {
+    "labelEn": "Four-deck reward and penalty learning",
+    "questionTypes": {
+      "zh": [
+        "四牌堆收益与惩罚学习",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Four-deck reward and penalty learning",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "从四个牌堆抽牌，逐步学习奖励与不定期惩罚的差别。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Select card decks while learning their wins and occasional losses. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "牌堆T/Q/Z/A的历史奖励和惩罚不同。预测下一次抽哪个牌堆。",
+        "en": "Decks T/Q/Z/A have different reward and penalty histories. Predict the next deck."
+      },
+      "output": {
+        "zh": "Q（反应形式示意）",
+        "en": "Q (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "steingroever2015data/exp2.csv": {
+    "labelEn": "Four-deck reward and penalty learning",
+    "questionTypes": {
+      "zh": [
+        "四牌堆收益与惩罚学习",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Four-deck reward and penalty learning",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "从四个牌堆抽牌，逐步学习奖励与不定期惩罚的差别。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Select card decks while learning their wins and occasional losses. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "牌堆T/Q/Z/A的历史奖励和惩罚不同。预测下一次抽哪个牌堆。",
+        "en": "Decks T/Q/Z/A have different reward and penalty histories. Predict the next deck."
+      },
+      "output": {
+        "zh": "Q（反应形式示意）",
+        "en": "Q (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "steingroever2015data/exp3.csv": {
+    "labelEn": "Four-deck reward and penalty learning",
+    "questionTypes": {
+      "zh": [
+        "四牌堆收益与惩罚学习",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Four-deck reward and penalty learning",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "从四个牌堆抽牌，逐步学习奖励与不定期惩罚的差别。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Select card decks while learning their wins and occasional losses. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "牌堆T/Q/Z/A的历史奖励和惩罚不同。预测下一次抽哪个牌堆。",
+        "en": "Decks T/Q/Z/A have different reward and penalty histories. Predict the next deck."
+      },
+      "output": {
+        "zh": "Q（反应形式示意）",
+        "en": "Q (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "tomov2020discovery/exp2.csv": {
+    "labelEn": "Subway-network navigation",
+    "questionTypes": {
+      "zh": [
+        "地铁网络路径规划",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Subway-network navigation",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在不熟悉的地铁网络中，根据邻站信息前往目标车站。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Plan movements through an unfamiliar network to a goal station. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "当前位置4，目标6；相邻站点按方向列出。预测下一步方向按键。",
+        "en": "Current station is 4, goal is 6, and neighboring stations are listed by direction. Predict the next movement key."
+      },
+      "output": {
+        "zh": "E（反应形式示意）",
+        "en": "E (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "tomov2020discovery/exp4.csv": {
+    "labelEn": "Subway-network navigation",
+    "questionTypes": {
+      "zh": [
+        "地铁网络路径规划",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Subway-network navigation",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在不熟悉的地铁网络中，根据邻站信息前往目标车站。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Plan movements through an unfamiliar network to a goal station. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "当前位置4，目标6；相邻站点按方向列出。预测下一步方向按键。",
+        "en": "Current station is 4, goal is 6, and neighboring stations are listed by direction. Predict the next movement key."
+      },
+      "output": {
+        "zh": "E（反应形式示意）",
+        "en": "E (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "tomov2020discovery/exp5.csv": {
+    "labelEn": "Subway-network navigation",
+    "questionTypes": {
+      "zh": [
+        "地铁网络路径规划",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Subway-network navigation",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在不熟悉的地铁网络中，根据邻站信息前往目标车站。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Plan movements through an unfamiliar network to a goal station. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "当前位置4，目标6；相邻站点按方向列出。预测下一步方向按键。",
+        "en": "Current station is 4, goal is 6, and neighboring stations are listed by direction. Predict the next movement key."
+      },
+      "output": {
+        "zh": "E（反应形式示意）",
+        "en": "E (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "tomov2020discovery/exp7.csv": {
+    "labelEn": "Subway-network navigation",
+    "questionTypes": {
+      "zh": [
+        "地铁网络路径规划",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Subway-network navigation",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在不熟悉的地铁网络中，根据邻站信息前往目标车站。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Plan movements through an unfamiliar network to a goal station. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "当前位置4，目标6；相邻站点按方向列出。预测下一步方向按键。",
+        "en": "Current station is 4, goal is 6, and neighboring stations are listed by direction. Predict the next movement key."
+      },
+      "output": {
+        "zh": "E（反应形式示意）",
+        "en": "E (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "tomov2021multitask/exp1.csv": {
+    "labelEn": "Navigation under changing resource values",
+    "questionTypes": {
+      "zh": [
+        "资源价值变化下的导航",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Navigation under changing resource values",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "城堡各房间含不同资源，市场价格变化时需要重新选择有利路线。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose castle routes using resource amounts and changing market prices. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "木/石/铁价格为1/−1/0；房间资源已部分探索。预测下一步选择哪扇门。",
+        "en": "Wood/stone/iron prices are 1/−1/0; some room resources have been explored. Predict the next door."
+      },
+      "output": {
+        "zh": "B（反应形式示意）",
+        "en": "B (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "tomov2021multitask/exp3.csv": {
+    "labelEn": "Navigation under changing resource values",
+    "questionTypes": {
+      "zh": [
+        "资源价值变化下的导航",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Navigation under changing resource values",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "城堡各房间含不同资源，市场价格变化时需要重新选择有利路线。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose castle routes using resource amounts and changing market prices. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "木/石/铁价格为1/−1/0；房间资源已部分探索。预测下一步选择哪扇门。",
+        "en": "Wood/stone/iron prices are 1/−1/0; some room resources have been explored. Predict the next door."
+      },
+      "output": {
+        "zh": "B（反应形式示意）",
+        "en": "B (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "waltz2020differential/exp1.csv": {
+    "labelEn": "Two-machine exploration",
+    "questionTypes": {
+      "zh": [
+        "两选项探索与利用",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Two-machine exploration",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "先观察机器奖励，再自行选择以争取更多积分。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Use observed rewards to choose between two machines. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "机器R/M的初始收益已观察。当前可自由选择，预测下一台。",
+        "en": "Initial rewards for R/M have been observed. Predict the next free choice."
+      },
+      "output": {
+        "zh": "R（反应形式示意）",
+        "en": "R (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "wilson2014humans/exp1.csv": {
+    "labelEn": "Horizon-dependent exploration",
+    "questionTypes": {
+      "zh": [
+        "选择机会与探索行为",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Horizon-dependent exploration",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在只能再选一次或还能多选几次的条件下，决定探索还是利用已知收益。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose between exploring uncertainty and exploiting known rewards. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "A收益已观察较多，D仅观察一次；本局还剩6次选择。预测下一次选择。",
+        "en": "A has been observed several times and D once; six choices remain. Predict the next choice."
+      },
+      "output": {
+        "zh": "D（反应形式示意）",
+        "en": "D (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "wilson2014humans/exp3.csv": {
+    "labelEn": "Horizon-dependent exploration",
+    "questionTypes": {
+      "zh": [
+        "选择机会与探索行为",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Horizon-dependent exploration",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在只能再选一次或还能多选几次的条件下，决定探索还是利用已知收益。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose between exploring uncertainty and exploiting known rewards. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "A收益已观察较多，D仅观察一次；本局还剩6次选择。预测下一次选择。",
+        "en": "A has been observed several times and D once; six choices remain. Predict the next choice."
+      },
+      "output": {
+        "zh": "D（反应形式示意）",
+        "en": "D (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "wilson2014humans/exp4.csv": {
+    "labelEn": "Horizon-dependent exploration",
+    "questionTypes": {
+      "zh": [
+        "选择机会与探索行为",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Horizon-dependent exploration",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在只能再选一次或还能多选几次的条件下，决定探索还是利用已知收益。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose between exploring uncertainty and exploiting known rewards. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "A收益已观察较多，D仅观察一次；本局还剩6次选择。预测下一次选择。",
+        "en": "A has been observed several times and D once; six choices remain. Predict the next choice."
+      },
+      "output": {
+        "zh": "D（反应形式示意）",
+        "en": "D (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "wilson2014humans/exp5.csv": {
+    "labelEn": "Horizon-dependent exploration",
+    "questionTypes": {
+      "zh": [
+        "选择机会与探索行为",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Horizon-dependent exploration",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "在只能再选一次或还能多选几次的条件下，决定探索还是利用已知收益。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose between exploring uncertainty and exploiting known rewards. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "A收益已观察较多，D仅观察一次；本局还剩6次选择。预测下一次选择。",
+        "en": "A has been observed several times and D once; six choices remain. Predict the next choice."
+      },
+      "output": {
+        "zh": "D（反应形式示意）",
+        "en": "D (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "wise2019acomputational/exp1.csv": {
+    "labelEn": "Learning changing shock probabilities",
+    "questionTypes": {
+      "zh": [
+        "变化风险的概率学习",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Learning changing shock probabilities",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "依据此前反馈，估计视觉刺激在当前时刻预示电击的概率。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Estimate a stimulus’s current shock probability from prior outcomes. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "刺激G的先前反馈有电击和无电击；概率可能变化。预测当前概率估计。",
+        "en": "Stimulus G has produced shock and no-shock outcomes, with possible changes over time. Predict the current probability estimate."
+      },
+      "output": {
+        "zh": "60（反应形式示意）",
+        "en": "60 (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "wu2018generalisation/exp1.csv": {
+    "labelEn": "Reward generalization across ordered options",
+    "questionTypes": {
+      "zh": [
+        "有序选项的奖励泛化",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Reward generalization across ordered options",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "相邻选项通常收益相似，在有限选择机会内学习和寻找高收益位置。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Explore ordered options whose neighboring rewards tend to be similar. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "选项1–30排列为一条线，21的奖励为70；还可选择若干次。预测下一次位置。",
+        "en": "Options 1–30 lie in order; option 21 has reward 70 and a few choices remain. Predict the next location."
+      },
+      "output": {
+        "zh": "22（反应形式示意）",
+        "en": "22 (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "wu2023chunking/exp1.csv": {
+    "labelEn": "Instructed key-sequence response",
+    "questionTypes": {
+      "zh": [
+        "按键指令与序列反应",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Instructed key-sequence response",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "依照连续指令快速、准确地按指定键。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Respond to a sequence of specified keys. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "当前指令要求按D，此前反应序列已给出。预测参与者实际按键。",
+        "en": "The current instruction requests D; previous response history is supplied. Predict the actual key press."
+      },
+      "output": {
+        "zh": "D（反应形式示意）",
+        "en": "D (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "wu2023chunking/exp2.csv": {
+    "labelEn": "Instructed key-sequence response",
+    "questionTypes": {
+      "zh": [
+        "按键指令与序列反应",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Instructed key-sequence response",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "依照连续指令快速、准确地按指定键。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Respond to a sequence of specified keys. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "当前指令要求按D，此前反应序列已给出。预测参与者实际按键。",
+        "en": "The current instruction requests D; previous response history is supplied. Predict the actual key press."
+      },
+      "output": {
+        "zh": "D（反应形式示意）",
+        "en": "D (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "wulff2018description/exp1.csv": {
+    "labelEn": "Choice with described lottery probabilities",
+    "questionTypes": {
+      "zh": [
+        "已知概率的彩票选择",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Choice with described lottery probabilities",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "根据明确给出的收益和概率，在两种彩票中作选择。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Select a lottery from explicitly described outcomes and probabilities. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "彩票I：80%得4分，否则0分；B：确定得3分。预测彩票选择。",
+        "en": "Lottery I: 80% chance of four points, otherwise zero; B: three points for certain. Predict the lottery choice."
+      },
+      "output": {
+        "zh": "B（反应形式示意）",
+        "en": "B (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "wulff2018sampling/exp1.csv": {
+    "labelEn": "Sampling before a lottery decision",
+    "questionTypes": {
+      "zh": [
+        "抽样了解后的彩票选择",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Sampling before a lottery decision",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "先自由抽样了解未知彩票的结果，再决定何时停止并正式选择。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Learn unknown lotteries through free sampling, then stop and make a consequential choice. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "J/T彩票概率未知，已抽样若干次。预测继续抽样还是按U停止。",
+        "en": "J/T probabilities are unknown; several samples have been observed. Predict more sampling or U to stop."
+      },
+      "output": {
+        "zh": "U（反应形式示意）",
+        "en": "U (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "xiong2023neural/exp1.csv": {
+    "labelEn": "Learning after abrupt reward changes",
+    "questionTypes": {
+      "zh": [
+        "突变奖励下的学习",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Learning after abrupt reward changes",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "两台机器的预期收益会突然变化，需要依据反馈调整选择。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Adjust machine choices when expected rewards abruptly change. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "T/E收益以0.2概率发生突变，当前历史显示E最近收益下降。预测下一次选择。",
+        "en": "T/E expected rewards change abruptly with hazard 0.2; E’s recent rewards have fallen. Predict the next choice."
+      },
+      "output": {
+        "zh": "T（反应形式示意）",
+        "en": "T (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "zhu2020bayesian/exp1.csv": {
+    "labelEn": "Weather-event probability judgments",
+    "questionTypes": {
+      "zh": [
+        "天气事件的概率判断",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Weather-event probability judgments",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "对涉及天气事件的联合、逻辑或条件关系作概率估计。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Estimate probabilities for logical, joint or conditional weather statements. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "问题：如果某天有雨，那天也冷的概率是多少？预测参与者报告的概率。",
+        "en": "If a day is rainy, what is the probability that it is also cold? Predict the participant’s probability report."
+      },
+      "output": {
+        "zh": "40（反应形式示意）",
+        "en": "40 (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "zhu2020bayesian/exp2.csv": {
+    "labelEn": "Weather-event probability judgments",
+    "questionTypes": {
+      "zh": [
+        "天气事件的概率判断",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Weather-event probability judgments",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "对涉及天气事件的联合、逻辑或条件关系作概率估计。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Estimate probabilities for logical, joint or conditional weather statements. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "问题：如果某天有雨，那天也冷的概率是多少？预测参与者报告的概率。",
+        "en": "If a day is rainy, what is the probability that it is also cold? Predict the participant’s probability report."
+      },
+      "output": {
+        "zh": "40（反应形式示意）",
+        "en": "40 (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "zorowitz2023data/exp1.csv": {
+    "labelEn": "Two-stage spaceship treasure choice",
+    "questionTypes": {
+      "zh": [
+        "两阶段飞船寻宝",
+        "真实历史条件",
+        "选择或反应预测"
+      ],
+      "en": [
+        "Two-stage spaceship treasure choice",
+        "Real-history conditioning",
+        "Choice or response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "先选飞船到星球，再选外星人交易；转移有不确定性，奖励随时间变化。系统的任务是预测当前参与者的反应，而不是替参与者求一条最优解。",
+      "en": "Choose rockets and aliens while learning uncertain transitions and changing rewards. The system predicts this participant’s response rather than solving for an optimal policy."
+    },
+    "inputEn": "Experiment rules, prior human responses and feedback, and the current task stimulus.",
+    "actionEn": "Predict the next response for this participant at the current stage.",
+    "example": {
+      "prompt": {
+        "zh": "两艘飞船以不同概率去蓝/红星球，各星球有两个外星人。预测当前阶段的选择。",
+        "en": "Two rockets have different blue/red planet transition probabilities, with two aliens per planet. Predict the current-stage choice."
+      },
+      "output": {
+        "zh": "Q（反应形式示意）",
+        "en": "Q (illustrative response)"
+      },
+      "reasoning": {
+        "zh": "例子只说明题目与输出形式。真实评分看该预测是否与已保存的人类下一次反应一致；这个示意输出不是公开的参与者答案，也不代表人类均值或最优策略。",
+        "en": "This illustrates the stimulus and output format. Actual scoring compares with the saved human next response. This output is not a disclosed participant answer, a human mean or an optimal policy."
+      },
+      "isIllustrative": true
+    }
+  }
+}

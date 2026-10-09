@@ -1,0 +1,2844 @@
+{
+  "GSM8K": {
+    "labelEn": "Grade-school multi-step arithmetic",
+    "questionTypes": {
+      "zh": [
+        "数量关系",
+        "多步计算",
+        "数值作答"
+      ],
+      "en": [
+        "Word problems",
+        "Multi-step arithmetic",
+        "Numeric answer"
+      ]
+    },
+    "coverage": {
+      "zh": "题目通常把购物、速度、人数或时间等关系写成一段日常故事。系统需要先识别数量关系，再完成连续计算；本轮只比较最终数值，不验证整段推导。",
+      "en": "Everyday stories describe quantities such as prices, people or time. The system must turn these relationships into several arithmetic steps. This run checks the final number, not the full derivation."
+    },
+    "inputEn": "A word problem.",
+    "actionEn": "Return the final numerical result.",
+    "example": {
+      "prompt": {
+        "zh": "小林有18支笔，先送给朋友5支，又买了两盒笔，每盒4支。他现在有多少支笔？",
+        "en": "Lin has 18 pens, gives away 5, then buys two boxes of 4 pens. How many pens does Lin have now?"
+      },
+      "output": {
+        "zh": "21",
+        "en": "21"
+      },
+      "reasoning": {
+        "zh": "18 − 5 + 2 × 4 = 21。本轮最终答案字段应返回完整数值21。",
+        "en": "18 − 5 + 2 × 4 = 21. The final answer field must contain the complete number 21."
+      },
+      "isIllustrative": true
+    }
+  },
+  "SVAMP": {
+    "labelEn": "Perturbed arithmetic word problems",
+    "questionTypes": {
+      "zh": [
+        "文字数学",
+        "关系变式",
+        "数值作答"
+      ],
+      "en": [
+        "Arithmetic word problems",
+        "Relationship variations",
+        "Numeric answer"
+      ]
+    },
+    "coverage": {
+      "zh": "重点是同一类文字数学题在措辞、所问对象或运算关系变化后是否仍能算对。不能只凭“还剩”“一共”等词套用固定运算。",
+      "en": "This tests arithmetic understanding when wording, the quantity being asked for, or the relationship changes. A keyword alone should not determine the operation."
+    },
+    "inputEn": "A modified arithmetic story.",
+    "actionEn": "Identify the relationship and return a number.",
+    "example": {
+      "prompt": {
+        "zh": "小林原来有一些笔。送出5支后还有13支。他原来有多少支？",
+        "en": "Lin gives away 5 pens and has 13 left. How many did Lin have initially?"
+      },
+      "output": {
+        "zh": "18",
+        "en": "18"
+      },
+      "reasoning": {
+        "zh": "问的是原来数量，所以是13 + 5，而不是13 − 5。",
+        "en": "The question asks for the initial amount: 13 + 5, not 13 − 5."
+      },
+      "isIllustrative": true
+    }
+  },
+  "MATH-500": {
+    "labelEn": "Competition mathematics",
+    "questionTypes": {
+      "zh": [
+        "代数",
+        "几何与数论",
+        "数学表达式"
+      ],
+      "en": [
+        "Algebra",
+        "Geometry and number theory",
+        "Mathematical expressions"
+      ]
+    },
+    "coverage": {
+      "zh": "题目涉及竞赛数学的不同领域，答案可能是整数、分数、根式或符号表达式。解题通常需要公式、变换或证明式推理，而不只是日常算术。",
+      "en": "Competition problems span several mathematical subjects. Answers may be integers, fractions, radicals or symbolic expressions, requiring mathematical transformations rather than everyday arithmetic alone."
+    },
+    "inputEn": "A mathematical problem statement.",
+    "actionEn": "Return the final mathematical answer.",
+    "example": {
+      "prompt": {
+        "zh": "解方程 x² − 5x + 6 = 0，写出全部实数解。",
+        "en": "Solve x² − 5x + 6 = 0 and give all real solutions."
+      },
+      "output": {
+        "zh": "2, 3",
+        "en": "2, 3"
+      },
+      "reasoning": {
+        "zh": "因式分解为(x − 2)(x − 3)。例子说明符号答案；实际评分还使用登记的规范化与等价检查。",
+        "en": "Factor as (x − 2)(x − 3). The example illustrates a symbolic answer; the actual grader uses registered normalization and equivalence checks."
+      },
+      "isIllustrative": true
+    }
+  },
+  "AQuA-RAT": {
+    "labelEn": "Quantitative reasoning with choices",
+    "questionTypes": {
+      "zh": [
+        "数学选择题",
+        "比例与数量",
+        "最终选项"
+      ],
+      "en": [
+        "Math multiple choice",
+        "Ratios and quantities",
+        "Final option"
+      ]
+    },
+    "coverage": {
+      "zh": "题干给出定量关系和候选答案。系统必须完成计算或推理，再选择正确选项；解释文本不是本轮主评分对象。",
+      "en": "A quantitative problem comes with answer choices. The system computes or reasons, then selects an option; explanatory reasoning is not the primary score in this run."
+    },
+    "inputEn": "A math problem and answer choices.",
+    "actionEn": "Choose the correct answer option.",
+    "example": {
+      "prompt": {
+        "zh": "某件商品原价100元，打八折后再减10元，现价是多少？A.70 B.80 C.90 D.100",
+        "en": "An item costs 100. Apply a 20% discount, then subtract 10. What is the price? A.70 B.80 C.90 D.100"
+      },
+      "output": {
+        "zh": "A",
+        "en": "A"
+      },
+      "reasoning": {
+        "zh": "100 × 0.8 − 10 = 70，所以选A。",
+        "en": "100 × 0.8 − 10 = 70, so choose A."
+      },
+      "isIllustrative": true
+    }
+  },
+  "SciBench": {
+    "labelEn": "University-level scientific calculation",
+    "questionTypes": {
+      "zh": [
+        "科学计算",
+        "公式应用",
+        "数值答案"
+      ],
+      "en": [
+        "Scientific calculation",
+        "Formula application",
+        "Numeric answer"
+      ]
+    },
+    "coverage": {
+      "zh": "题目来自大学科学课程的数值问题，要求把物理等科学知识转成计算。当前主分使用严格数值匹配；登记的1%容差辅助指标另报，不能把两者混为同一分数。",
+      "en": "University science problems require applying scientific formulas to numerical questions. The primary score uses strict numerical equality; a registered 1% tolerance diagnostic is reported separately."
+    },
+    "inputEn": "A science problem with given quantities.",
+    "actionEn": "Compute and return the required number.",
+    "example": {
+      "prompt": {
+        "zh": "质量为2 kg的物体，加速度为3 m/s²。按F = ma计算合力大小；最终只返回数值。",
+        "en": "An object has mass 2 kg and acceleration 3 m/s². Use F = ma to find the force; return only the number."
+      },
+      "output": {
+        "zh": "6",
+        "en": "6"
+      },
+      "reasoning": {
+        "zh": "F = 2 × 3 = 6 N。单位用于理解题目，最终数值字段按本轮格式返回6。",
+        "en": "F = 2 × 3 = 6 N. Units explain the problem; the final numeric field contains 6 under this run’s format."
+      },
+      "isIllustrative": true
+    }
+  },
+  "2WikiMultihopQA": {
+    "labelEn": "Evidence-linked multi-hop QA",
+    "questionTypes": {
+      "zh": [
+        "证据阅读",
+        "多跳事实链",
+        "短答案"
+      ],
+      "en": [
+        "Evidence reading",
+        "Multi-hop fact chains",
+        "Short answer"
+      ]
+    },
+    "coverage": {
+      "zh": "跨多个证据段落把实体与关系连接起来。答案通常是一个实体或简短事实；本轮按允许别名匹配，过程中的证据文字不能直接代替最终答案。",
+      "en": "Connect entities and relationships across evidence passages. The output is usually an entity or short fact; this run matches registered answer aliases."
+    },
+    "inputEn": "A question and supplied evidence passages.",
+    "actionEn": "Connect the relevant facts and return a short answer.",
+    "example": {
+      "prompt": {
+        "zh": "材料1：作家林舟出生于青湾市。材料2：青湾市位于北河省。问题：林舟出生的城市属于哪个省？",
+        "en": "Passage 1: author Lin Zhou was born in Qingwan. Passage 2: Qingwan is in Beihe Province. Which province contains Lin Zhou’s birthplace?"
+      },
+      "output": {
+        "zh": "北河省",
+        "en": "Beihe Province"
+      },
+      "reasoning": {
+        "zh": "需要连接“人物→出生城市→省份”，而不是只在一段材料中找完整答案。人物和地名均为说明例题虚构。",
+        "en": "Link person → birthplace → province. No single passage contains the whole answer. The people and places in this illustration are fictional."
+      },
+      "isIllustrative": true
+    }
+  },
+  "HotpotQA": {
+    "labelEn": "Multi-hop QA with distractors",
+    "questionTypes": {
+      "zh": [
+        "证据阅读",
+        "多跳事实链",
+        "短答案"
+      ],
+      "en": [
+        "Evidence reading",
+        "Multi-hop fact chains",
+        "Short answer"
+      ]
+    },
+    "coverage": {
+      "zh": "给定上下文含相关材料和干扰材料，需要先筛选证据再作答。答案通常是一个实体或简短事实；本轮按允许别名匹配，过程中的证据文字不能直接代替最终答案。",
+      "en": "The supplied context includes relevant and distracting passages, requiring evidence selection before answering. The output is usually an entity or short fact; this run matches registered answer aliases."
+    },
+    "inputEn": "A question and supplied evidence passages.",
+    "actionEn": "Connect the relevant facts and return a short answer.",
+    "example": {
+      "prompt": {
+        "zh": "材料1：作家林舟出生于青湾市。材料2：青湾市位于北河省。问题：林舟出生的城市属于哪个省？材料3：另一位作家周行居住于南山省（干扰材料）。",
+        "en": "Passage 1: author Lin Zhou was born in Qingwan. Passage 2: Qingwan is in Beihe Province. Which province contains Lin Zhou’s birthplace? Passage 3: a different author lives in Nanshan Province (distractor)."
+      },
+      "output": {
+        "zh": "北河省",
+        "en": "Beihe Province"
+      },
+      "reasoning": {
+        "zh": "需要连接“人物→出生城市→省份”，而不是只在一段材料中找完整答案。人物和地名均为说明例题虚构。",
+        "en": "Link person → birthplace → province. No single passage contains the whole answer. The people and places in this illustration are fictional."
+      },
+      "isIllustrative": true
+    }
+  },
+  "MuSiQue": {
+    "labelEn": "Compositional multi-hop QA",
+    "questionTypes": {
+      "zh": [
+        "证据阅读",
+        "多跳事实链",
+        "短答案"
+      ],
+      "en": [
+        "Evidence reading",
+        "Multi-hop fact chains",
+        "Short answer"
+      ]
+    },
+    "coverage": {
+      "zh": "多个相互依赖的问题组合成最终问题，需保留完整多跳证据。答案通常是一个实体或简短事实；本轮按允许别名匹配，过程中的证据文字不能直接代替最终答案。",
+      "en": "Several dependent subquestions form the final question; complete multi-hop evidence must remain available. The output is usually an entity or short fact; this run matches registered answer aliases."
+    },
+    "inputEn": "A question and supplied evidence passages.",
+    "actionEn": "Connect the relevant facts and return a short answer.",
+    "example": {
+      "prompt": {
+        "zh": "材料1：作家林舟出生于青湾市。材料2：青湾市位于北河省。问题：林舟出生的城市属于哪个省？",
+        "en": "Passage 1: author Lin Zhou was born in Qingwan. Passage 2: Qingwan is in Beihe Province. Which province contains Lin Zhou’s birthplace?"
+      },
+      "output": {
+        "zh": "北河省",
+        "en": "Beihe Province"
+      },
+      "reasoning": {
+        "zh": "需要连接“人物→出生城市→省份”，而不是只在一段材料中找完整答案。人物和地名均为说明例题虚构。",
+        "en": "Link person → birthplace → province. No single passage contains the whole answer. The people and places in this illustration are fictional."
+      },
+      "isIllustrative": true
+    }
+  },
+  "Bamboogle": {
+    "labelEn": "Difficult factual QA",
+    "questionTypes": {
+      "zh": [
+        "较难事实问题",
+        "闭卷问答",
+        "实体或短答案"
+      ],
+      "en": [
+        "Difficult factual QA",
+        "Closed-book QA",
+        "Entity or short answer"
+      ]
+    },
+    "coverage": {
+      "zh": "关注较难的事实检索需求，但本轮只给问题，不接自主搜索。本轮最终回答与金标准别名对照；不据此评价完整搜索过程。",
+      "en": "Targets difficult factual information needs, but this run supplies only the question without autonomous search. The final response is compared with reference aliases; this does not evaluate a complete search process."
+    },
+    "inputEn": "A factual question, without additional web tools.",
+    "actionEn": "Return the requested entity or short fact.",
+    "example": {
+      "prompt": {
+        "zh": "法国的首都是哪座城市？",
+        "en": "What is the capital of France?"
+      },
+      "output": {
+        "zh": "巴黎",
+        "en": "Paris"
+      },
+      "reasoning": {
+        "zh": "这是简化题型示例。正确实体为巴黎；真实题库包含更难或更少见的事实。",
+        "en": "This is a simplified type illustration. Paris is the correct entity; the real pool includes harder or less familiar facts."
+      },
+      "isIllustrative": true
+    }
+  },
+  "NQ-open": {
+    "labelEn": "Natural search-query QA",
+    "questionTypes": {
+      "zh": [
+        "真实搜索式问题",
+        "闭卷问答",
+        "实体或短答案"
+      ],
+      "en": [
+        "Natural search-query QA",
+        "Closed-book QA",
+        "Entity or short answer"
+      ]
+    },
+    "coverage": {
+      "zh": "问题形式接近日常搜索，通常要求一个实体、时间或地点。本轮最终回答与金标准别名对照；不据此评价完整搜索过程。",
+      "en": "Questions resemble everyday search queries and usually ask for an entity, time or place. The final response is compared with reference aliases; this does not evaluate a complete search process."
+    },
+    "inputEn": "A factual question, without additional web tools.",
+    "actionEn": "Return the requested entity or short fact.",
+    "example": {
+      "prompt": {
+        "zh": "法国的首都是哪座城市？",
+        "en": "What is the capital of France?"
+      },
+      "output": {
+        "zh": "巴黎",
+        "en": "Paris"
+      },
+      "reasoning": {
+        "zh": "这是简化题型示例。正确实体为巴黎；真实题库包含更难或更少见的事实。",
+        "en": "This is a simplified type illustration. Paris is the correct entity; the real pool includes harder or less familiar facts."
+      },
+      "isIllustrative": true
+    }
+  },
+  "PopQA": {
+    "labelEn": "Long-tail entity knowledge",
+    "questionTypes": {
+      "zh": [
+        "长尾实体事实",
+        "闭卷问答",
+        "实体或短答案"
+      ],
+      "en": [
+        "Long-tail entity knowledge",
+        "Closed-book QA",
+        "Entity or short answer"
+      ]
+    },
+    "coverage": {
+      "zh": "关注不同知名度实体的属性，较少见实体的知识更难直接回忆。本轮最终回答与金标准别名对照；不据此评价完整搜索过程。",
+      "en": "Questions target entity attributes across popularity levels; less familiar entities are harder to recall. The final response is compared with reference aliases; this does not evaluate a complete search process."
+    },
+    "inputEn": "A factual question, without additional web tools.",
+    "actionEn": "Return the requested entity or short fact.",
+    "example": {
+      "prompt": {
+        "zh": "法国的首都是哪座城市？",
+        "en": "What is the capital of France?"
+      },
+      "output": {
+        "zh": "巴黎",
+        "en": "Paris"
+      },
+      "reasoning": {
+        "zh": "这是简化题型示例。正确实体为巴黎；真实题库包含更难或更少见的事实。",
+        "en": "This is a simplified type illustration. Paris is the correct entity; the real pool includes harder or less familiar facts."
+      },
+      "isIllustrative": true
+    }
+  },
+  "TriviaQA": {
+    "labelEn": "Trivia-style factual QA",
+    "questionTypes": {
+      "zh": [
+        "知识问答事实",
+        "闭卷问答",
+        "实体或短答案"
+      ],
+      "en": [
+        "Trivia-style factual QA",
+        "Closed-book QA",
+        "Entity or short answer"
+      ]
+    },
+    "coverage": {
+      "zh": "关注人物、作品、历史或地理等事实，允许登记的答案别名。本轮最终回答与金标准别名对照；不据此评价完整搜索过程。",
+      "en": "Questions concern people, works, history or geography and accept registered answer aliases. The final response is compared with reference aliases; this does not evaluate a complete search process."
+    },
+    "inputEn": "A factual question, without additional web tools.",
+    "actionEn": "Return the requested entity or short fact.",
+    "example": {
+      "prompt": {
+        "zh": "法国的首都是哪座城市？",
+        "en": "What is the capital of France?"
+      },
+      "output": {
+        "zh": "巴黎",
+        "en": "Paris"
+      },
+      "reasoning": {
+        "zh": "这是简化题型示例。正确实体为巴黎；真实题库包含更难或更少见的事实。",
+        "en": "This is a simplified type illustration. Paris is the correct entity; the real pool includes harder or less familiar facts."
+      },
+      "isIllustrative": true
+    }
+  },
+  "BoolQ": {
+    "labelEn": "Passage-based yes/no QA",
+    "questionTypes": {
+      "zh": [
+        "短文阅读",
+        "是非判断"
+      ],
+      "en": [
+        "Passage comprehension",
+        "Yes/no judgment"
+      ]
+    },
+    "coverage": {
+      "zh": "每题提供一段文章和一个可以回答“是/否”的问题。系统应依据文中内容判断，而不是只靠自己的常识；本轮按最终选项计分。",
+      "en": "Each item contains a passage and a yes/no question. The response should follow the passage rather than background assumptions; the final option is scored."
+    },
+    "inputEn": "A passage, a question and yes/no choices.",
+    "actionEn": "Choose yes or no based on the passage.",
+    "example": {
+      "prompt": {
+        "zh": "短文：博物馆周一闭馆，周二至周日开放。问题：博物馆周一开放吗？",
+        "en": "Passage: the museum is closed on Mondays and open Tuesday through Sunday. Is it open on Monday?"
+      },
+      "output": {
+        "zh": "否",
+        "en": "No"
+      },
+      "reasoning": {
+        "zh": "短文明确说周一闭馆，因此选择否。",
+        "en": "The passage explicitly states that it is closed on Monday."
+      },
+      "isIllustrative": true
+    }
+  },
+  "PubMedQA": {
+    "labelEn": "Biomedical abstract conclusion QA",
+    "questionTypes": {
+      "zh": [
+        "摘要阅读",
+        "yes / no / maybe",
+        "结论判断"
+      ],
+      "en": [
+        "Abstract reading",
+        "yes / no / maybe",
+        "Conclusion judgment"
+      ]
+    },
+    "coverage": {
+      "zh": "给出研究问题及摘要上下文，要求判断文献支持肯定、否定还是尚不能确定的结论。它测试文献理解，不是让系统提出诊疗建议。",
+      "en": "A research question and abstract context support a yes, no or uncertain conclusion. This tests literature comprehension, not treatment advice."
+    },
+    "inputEn": "A research question and abstract context.",
+    "actionEn": "Select yes, no or maybe.",
+    "example": {
+      "prompt": {
+        "zh": "虚构摘要：研究比较方案甲与对照，但现有样本不足以判断差异。问题：方案甲确定优于对照吗？选项：yes / no / maybe。",
+        "en": "Fictional abstract: a study compares method A with a control, but the sample is insufficient to establish a difference. Is A definitively better? Choices: yes / no / maybe."
+      },
+      "output": {
+        "zh": "maybe",
+        "en": "maybe"
+      },
+      "reasoning": {
+        "zh": "材料尚不足以得出肯定或否定结论，所以选maybe；这是虚构阅读示例。",
+        "en": "The evidence supports neither a definite positive nor a definite negative conclusion, so choose maybe. This is a fictional reading example."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FRAMES": {
+    "labelEn": "Closed-book multi-fact QA",
+    "questionTypes": {
+      "zh": [
+        "多事实关联",
+        "闭卷作答",
+        "短答案"
+      ],
+      "en": [
+        "Linked facts",
+        "Closed-book response",
+        "Short answer"
+      ]
+    },
+    "coverage": {
+      "zh": "同一道问题可能需要结合多个事实。当前条件只给题目，测试没有检索正文时的直接作答；与参考URL条件共享题源。",
+      "en": "Questions may require several connected facts. This condition supplies only the question, testing direct answers without retrieved page text. It shares the source pool with the reference-URL condition."
+    },
+    "inputEn": "The question only.",
+    "actionEn": "Return the connected factual answer.",
+    "example": {
+      "prompt": {
+        "zh": "问题：法国首都及其所在大洲分别是什么？本条件不附网页正文。",
+        "en": "What are France’s capital and continent? This condition supplies no page text."
+      },
+      "output": {
+        "zh": "巴黎；欧洲",
+        "en": "Paris; Europe"
+      },
+      "reasoning": {
+        "zh": "这个简化例子包含两个相关事实。两种条件的区别是可见证据，不是重新定义两份独立题库。",
+        "en": "This simplified item combines two facts. The conditions differ in visible evidence, rather than defining two independent question pools."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FRAMES-reference-URL": {
+    "labelEn": "Multi-fact QA with reference pages",
+    "questionTypes": {
+      "zh": [
+        "多事实关联",
+        "给定网页证据",
+        "短答案"
+      ],
+      "en": [
+        "Linked facts",
+        "Provided page evidence",
+        "Short answer"
+      ]
+    },
+    "coverage": {
+      "zh": "同一道问题可能需要结合多个事实。当前条件已提供指定参考网页的正文片段，测试读取与整合；不是自主搜索发现网页。",
+      "en": "Questions may require several connected facts. This condition provides fixed text from specified reference pages, testing reading and synthesis rather than autonomous page discovery."
+    },
+    "inputEn": "A question and fixed reference-page excerpts.",
+    "actionEn": "Return the connected factual answer.",
+    "example": {
+      "prompt": {
+        "zh": "参考片段：巴黎是法国首都；法国位于欧洲。问题：法国首都及其所在大洲分别是什么？",
+        "en": "Reference excerpts: Paris is the capital of France; France is in Europe. What are France’s capital and continent?"
+      },
+      "output": {
+        "zh": "巴黎；欧洲",
+        "en": "Paris; Europe"
+      },
+      "reasoning": {
+        "zh": "这个简化例子包含两个相关事实。两种条件的区别是可见证据，不是重新定义两份独立题库。",
+        "en": "This simplified item combines two facts. The conditions differ in visible evidence, rather than defining two independent question pools."
+      },
+      "isIllustrative": true
+    }
+  },
+  "BrowseComp-closed": {
+    "labelEn": "Closed-book web-research baseline",
+    "questionTypes": {
+      "zh": [
+        "困难事实调查",
+        "无浏览工具",
+        "最终短答案"
+      ],
+      "en": [
+        "Difficult factual investigation",
+        "No browsing tools",
+        "Final short answer"
+      ]
+    },
+    "coverage": {
+      "zh": "题目针对难以直接定位的信息，通常需要反复搜索并连接网页线索。本轮仅做闭卷基线，不提供搜索或浏览工具。",
+      "en": "Questions target hard-to-locate information, often requiring repeated searches and linked page evidence. This run is a closed-book baseline, without search or browsing tools."
+    },
+    "inputEn": "A research question without browsing tools.",
+    "actionEn": "Attempt a direct factual answer.",
+    "example": {
+      "prompt": {
+        "zh": "说明问题：某个虚构小镇2024年文化节的闭幕演出在哪个场地举行？相关公告分散在主办方日程与场地介绍中。",
+        "en": "Illustration: where was the closing performance of a fictional town’s 2024 cultural festival held? Clues are split between the organizer’s schedule and a venue page."
+      },
+      "output": {
+        "zh": "青湾文化馆（示意输出）",
+        "en": "Qingwan Cultural Hall (illustrative output)"
+      },
+      "reasoning": {
+        "zh": "地名和活动是虚构说明。闭卷条件看系统直接作答；自主浏览条件需要真实工具证据，不能用这个例子冒充已完成的浏览实验。",
+        "en": "The event and place are fictional. The closed-book condition asks for a direct answer; the browsing condition requires real tool evidence. This illustration is not a completed browsing experiment."
+      },
+      "isIllustrative": true
+    }
+  },
+  "BrowseComp-browsing": {
+    "labelEn": "Autonomous web research",
+    "questionTypes": {
+      "zh": [
+        "困难事实调查",
+        "实际搜索与阅读",
+        "最终短答案"
+      ],
+      "en": [
+        "Difficult factual investigation",
+        "Actual search and reading",
+        "Final short answer"
+      ]
+    },
+    "coverage": {
+      "zh": "题目针对难以直接定位的信息，通常需要反复搜索并连接网页线索。自主浏览条件尚未接入，当前没有正式成绩。",
+      "en": "Questions target hard-to-locate information, often requiring repeated searches and linked page evidence. The autonomous-browsing condition is pending and has no completed score here."
+    },
+    "inputEn": "A research question with real web tools.",
+    "actionEn": "Locate evidence and answer.",
+    "example": {
+      "prompt": {
+        "zh": "说明问题：某个虚构小镇2024年文化节的闭幕演出在哪个场地举行？相关公告分散在主办方日程与场地介绍中。",
+        "en": "Illustration: where was the closing performance of a fictional town’s 2024 cultural festival held? Clues are split between the organizer’s schedule and a venue page."
+      },
+      "output": {
+        "zh": "青湾文化馆（示意输出）",
+        "en": "Qingwan Cultural Hall (illustrative output)"
+      },
+      "reasoning": {
+        "zh": "地名和活动是虚构说明。闭卷条件看系统直接作答；自主浏览条件需要真实工具证据，不能用这个例子冒充已完成的浏览实验。",
+        "en": "The event and place are fictional. The closed-book condition asks for a direct answer; the browsing condition requires real tool evidence. This illustration is not a completed browsing experiment."
+      },
+      "isIllustrative": true
+    }
+  },
+  "BBH": {
+    "labelEn": "Hard reasoning task collection",
+    "questionTypes": {
+      "zh": [
+        "逻辑推断",
+        "符号或算术操作",
+        "排序等子任务"
+      ],
+      "en": [
+        "Logical deduction",
+        "Symbolic or arithmetic operations",
+        "Sorting and other subtasks"
+      ]
+    },
+    "coverage": {
+      "zh": "它是多个困难推理子任务的集合，而不是一种固定问法。不同子任务有不同输入与标签，例如词语排序、逻辑关系或时间推理；应按各子任务规则理解成绩。",
+      "en": "This is a collection of difficult reasoning subtasks, not one uniform question type. Inputs and labels vary across tasks such as word sorting, logical relations and temporal reasoning."
+    },
+    "inputEn": "A subtask question with its instructions.",
+    "actionEn": "Return the answer in that subtask’s format.",
+    "example": {
+      "prompt": {
+        "zh": "将词语 banana、apple、cherry 按英文字母顺序排列。",
+        "en": "Sort banana, apple and cherry alphabetically."
+      },
+      "output": {
+        "zh": "apple banana cherry",
+        "en": "apple banana cherry"
+      },
+      "reasoning": {
+        "zh": "例子属于排序型推理；它不能代表BBH所有子任务。",
+        "en": "This illustrates a sorting task and does not represent every BBH subtask."
+      },
+      "isIllustrative": true
+    }
+  },
+  "LogiQA": {
+    "labelEn": "Reading and logical deduction",
+    "questionTypes": {
+      "zh": [
+        "论证理解",
+        "必然推论",
+        "选择题"
+      ],
+      "en": [
+        "Argument comprehension",
+        "Logical entailment",
+        "Multiple choice"
+      ]
+    },
+    "coverage": {
+      "zh": "给出一段陈述或论证，选择能由前提推出的结论。重点是区分“必然成立”和“看起来可能”，而不是根据常识补上没有给出的前提。",
+      "en": "A statement or argument supports a conclusion. The task distinguishes what must follow from what merely seems plausible, without adding unstated assumptions."
+    },
+    "inputEn": "A logical scenario and answer choices.",
+    "actionEn": "Select the conclusion supported by the premises.",
+    "example": {
+      "prompt": {
+        "zh": "所有A都是B；没有B是C。哪项必然成立？A.没有A是C B.所有C都是A C.有A是C。",
+        "en": "All A are B; no B are C. Which must be true? A.No A are C B.All C are A C.Some A are C."
+      },
+      "output": {
+        "zh": "A",
+        "en": "A"
+      },
+      "reasoning": {
+        "zh": "A属于B，而B与C不相交，因此A与C也不相交。",
+        "en": "A is contained in B, and B is disjoint from C, so A is disjoint from C."
+      },
+      "isIllustrative": true
+    }
+  },
+  "MMLU": {
+    "labelEn": "Multidisciplinary multiple choice",
+    "questionTypes": {
+      "zh": [
+        "多学科知识",
+        "知识运用与推理",
+        "单选"
+      ],
+      "en": [
+        "Multidisciplinary knowledge",
+        "Knowledge application and reasoning",
+        "Single choice"
+      ]
+    },
+    "coverage": {
+      "zh": "题目跨多个学科，可能要求回忆概念、运用公式或分析情境。不同学科的题型与难度不同；本轮按原学科分层抽样。",
+      "en": "Items span disciplines and may test concepts, formulas or scenario analysis. Difficulty and question types vary by subject; this run samples by original subject."
+    },
+    "inputEn": "A subject-specific question and choices.",
+    "actionEn": "Select one correct option.",
+    "example": {
+      "prompt": {
+        "zh": "统计学示例：样本为2、4、6，其算术平均值是多少？A.2 B.3 C.4 D.6。",
+        "en": "Statistics illustration: what is the mean of 2, 4 and 6? A.2 B.3 C.4 D.6."
+      },
+      "output": {
+        "zh": "C",
+        "en": "C"
+      },
+      "reasoning": {
+        "zh": "平均值(2 + 4 + 6) / 3 = 4。真实多学科题库包含不同领域和更复杂问题。",
+        "en": "The mean is (2 + 4 + 6) / 3 = 4. The real pool covers other subjects and more complex items."
+      },
+      "isIllustrative": true
+    }
+  },
+  "MMLU-Pro": {
+    "labelEn": "Advanced multidisciplinary multiple choice",
+    "questionTypes": {
+      "zh": [
+        "多学科知识",
+        "知识运用与推理",
+        "单选"
+      ],
+      "en": [
+        "Multidisciplinary knowledge",
+        "Knowledge application and reasoning",
+        "Single choice"
+      ]
+    },
+    "coverage": {
+      "zh": "题目跨多个学科，可能要求回忆概念、运用公式或分析情境。Pro版本强调更难的推理与更多候选项；本轮按原学科分层抽样。",
+      "en": "Items span disciplines and may test concepts, formulas or scenario analysis. The Pro version uses harder reasoning and more choices; this run samples by original subject."
+    },
+    "inputEn": "A subject-specific question and choices.",
+    "actionEn": "Select one correct option.",
+    "example": {
+      "prompt": {
+        "zh": "统计学示例：样本为2、4、6，其算术平均值是多少？A.2 B.3 C.4 D.6。",
+        "en": "Statistics illustration: what is the mean of 2, 4 and 6? A.2 B.3 C.4 D.6."
+      },
+      "output": {
+        "zh": "C",
+        "en": "C"
+      },
+      "reasoning": {
+        "zh": "平均值(2 + 4 + 6) / 3 = 4。真实多学科题库包含不同领域和更复杂问题。",
+        "en": "The mean is (2 + 4 + 6) / 3 = 4. The real pool covers other subjects and more complex items."
+      },
+      "isIllustrative": true
+    }
+  },
+  "ARC-Challenge": {
+    "labelEn": "Challenging school science questions",
+    "questionTypes": {
+      "zh": [
+        "科学知识",
+        "现象解释",
+        "选择题"
+      ],
+      "en": [
+        "Science knowledge",
+        "Phenomenon explanation",
+        "Multiple choice"
+      ]
+    },
+    "coverage": {
+      "zh": "题目要求理解学校科学概念，或用概念解释一个现象、实验或因果关系。Challenge部分不是简单词语匹配；本轮根据最终选项判分。",
+      "en": "School-science concepts must explain phenomena, experiments or causal relationships. The Challenge subset is not simple word matching; this run scores the final option."
+    },
+    "inputEn": "A science question with choices.",
+    "actionEn": "Choose the correct scientific answer.",
+    "example": {
+      "prompt": {
+        "zh": "哪种状态的水通常具有固定体积但没有固定形状？A.固态 B.液态 C.气态。",
+        "en": "Which state of water normally has a fixed volume but no fixed shape? A.Solid B.Liquid C.Gas."
+      },
+      "output": {
+        "zh": "B",
+        "en": "B"
+      },
+      "reasoning": {
+        "zh": "液态水体积相对固定，形状随容器改变。",
+        "en": "Liquid water has a relatively fixed volume and takes the shape of its container."
+      },
+      "isIllustrative": true
+    }
+  },
+  "CommonsenseQA": {
+    "labelEn": "Everyday commonsense questions",
+    "questionTypes": {
+      "zh": [
+        "概念关系",
+        "日常情境",
+        "选择题"
+      ],
+      "en": [
+        "Concept relationships",
+        "Everyday situations",
+        "Multiple choice"
+      ]
+    },
+    "coverage": {
+      "zh": "题目涉及物品用途、地点关系、行动目的等日常常识。系统需要选择符合具体问题的答案，不能只选择与题目词语最相近的选项。",
+      "en": "Questions concern object uses, places or action purposes. The response must fit the specific question rather than merely match related words."
+    },
+    "inputEn": "A commonsense question and choices.",
+    "actionEn": "Select the most appropriate answer.",
+    "example": {
+      "prompt": {
+        "zh": "下雨时，哪件物品最适合帮助行人避雨？A.雨伞 B.铅笔 C.盘子。",
+        "en": "Which item best helps a pedestrian stay dry in the rain? A.Umbrella B.Pencil C.Plate."
+      },
+      "output": {
+        "zh": "A",
+        "en": "A"
+      },
+      "reasoning": {
+        "zh": "雨伞的用途与避雨目标相符。",
+        "en": "An umbrella serves the goal of staying dry in the rain."
+      },
+      "isIllustrative": true
+    }
+  },
+  "HellaSwag": {
+    "labelEn": "Plausible event continuation",
+    "questionTypes": {
+      "zh": [
+        "情境补全",
+        "事件顺序",
+        "候选续写"
+      ],
+      "en": [
+        "Situation completion",
+        "Event sequence",
+        "Candidate continuations"
+      ]
+    },
+    "coverage": {
+      "zh": "题目给出一段事件情境和若干后续，要求选出最自然、合理的继续发展。它评价候选选择，不是自由生成一段故事后主观打分。",
+      "en": "A described situation has several possible continuations. The task chooses the most plausible event, rather than freely generating a story for subjective grading."
+    },
+    "inputEn": "A situation and candidate continuations.",
+    "actionEn": "Choose the plausible next event.",
+    "example": {
+      "prompt": {
+        "zh": "他把水壶装满水并放到炉子上。接下来更合理的是：A.打开炉火加热 B.把水倒进电脑 C.把水壶穿在脚上。",
+        "en": "He fills a kettle and puts it on the stove. What is the plausible continuation? A.Turn on the heat B.Pour water into a computer C.Wear the kettle as a shoe."
+      },
+      "output": {
+        "zh": "A",
+        "en": "A"
+      },
+      "reasoning": {
+        "zh": "A与当前行动目的和物理情境一致。真实数据中的干扰项可能更具迷惑性。",
+        "en": "A fits the action’s purpose and physical situation. Real distractors can be less obvious."
+      },
+      "isIllustrative": true
+    }
+  },
+  "WinoGrande": {
+    "labelEn": "Reference and pronoun disambiguation",
+    "questionTypes": {
+      "zh": [
+        "指代消歧",
+        "语境填空",
+        "二选一"
+      ],
+      "en": [
+        "Reference resolution",
+        "Contextual gap filling",
+        "Two choices"
+      ]
+    },
+    "coverage": {
+      "zh": "一个句子中有空缺，两个候选对象都可能在语法上成立，但语义关系只支持其中之一。需要理解动作、属性和因果关系。",
+      "en": "A sentence has a gap with two grammatically possible candidates. Semantic or causal relations determine which one fits."
+    },
+    "inputEn": "A sentence with a blank and two entities.",
+    "actionEn": "Select the correct entity for the blank.",
+    "example": {
+      "prompt": {
+        "zh": "小林把书放进书包，因为____足够大。选项：书 / 书包。",
+        "en": "Lin puts a book in a bag because the ____ is large enough. Choices: book / bag."
+      },
+      "output": {
+        "zh": "书包",
+        "en": "bag"
+      },
+      "reasoning": {
+        "zh": "需要足够大的是容器书包，不是被装入的书。",
+        "en": "The container—the bag—must be large enough, not the book inside it."
+      },
+      "isIllustrative": true
+    }
+  },
+  "RACE": {
+    "labelEn": "Passage reading comprehension",
+    "questionTypes": {
+      "zh": [
+        "文章细节",
+        "主旨与推断",
+        "选择题"
+      ],
+      "en": [
+        "Passage details",
+        "Main ideas and inference",
+        "Multiple choice"
+      ]
+    },
+    "coverage": {
+      "zh": "给出完整文章，再回答与文章有关的选择题。题目可以问细节、主旨或隐含关系；答案应以文中信息为依据。",
+      "en": "A passage supports questions about details, main ideas or implied relationships. Answers should be grounded in the text."
+    },
+    "inputEn": "A passage, a question and options.",
+    "actionEn": "Select the passage-supported answer.",
+    "example": {
+      "prompt": {
+        "zh": "文章：小林每天乘公交上学。今天公交停运，她改为步行。问题：小林今天如何去学校？A.公交 B.步行 C.火车。",
+        "en": "Passage: Lin usually takes the bus to school. Today the bus is not running, so she walks. How does Lin travel today? A.Bus B.On foot C.Train."
+      },
+      "output": {
+        "zh": "B",
+        "en": "B"
+      },
+      "reasoning": {
+        "zh": "题目问“今天”，不能把“每天通常乘公交”当成当前答案。",
+        "en": "The question asks about today, so the usual bus journey is not the answer."
+      },
+      "isIllustrative": true
+    }
+  },
+  "CaseHOLD": {
+    "labelEn": "Legal holding selection",
+    "questionTypes": {
+      "zh": [
+        "法律上下文阅读",
+        "裁判要旨匹配",
+        "选择题"
+      ],
+      "en": [
+        "Legal-context reading",
+        "Holding selection",
+        "Multiple choice"
+      ]
+    },
+    "coverage": {
+      "zh": "根据法律文书中的上下文，从候选表述中选择对应的裁判要旨。它测试专业文本理解和选择，不提供个案法律意见。",
+      "en": "Legal-document context must be matched to a candidate holding. This tests specialized reading and choice, not advice on a real case."
+    },
+    "inputEn": "Legal context and candidate holdings.",
+    "actionEn": "Choose the holding that fits the text.",
+    "example": {
+      "prompt": {
+        "zh": "虚构片段：法院认为本案尚未查清合同是否成立，要求补充审理。哪项概括匹配？A.需继续查明合同成立事实 B.已确定所有合同无效。",
+        "en": "Fictional passage: the court finds that contract formation has not been established and requests further proceedings. Which summary fits? A.Further fact-finding is needed B.All contracts are already declared invalid."
+      },
+      "output": {
+        "zh": "A",
+        "en": "A"
+      },
+      "reasoning": {
+        "zh": "A保留原文的范围与不确定性。该例子是虚构文本理解题，不是法律建议。",
+        "en": "A preserves the passage’s scope and uncertainty. This is fictional reading comprehension, not legal advice."
+      },
+      "isIllustrative": true
+    }
+  },
+  "TruthfulQA": {
+    "labelEn": "Misconception-sensitive answer selection",
+    "questionTypes": {
+      "zh": [
+        "常见误解",
+        "事实真实性",
+        "单选适配"
+      ],
+      "en": [
+        "Common misconceptions",
+        "Factual truthfulness",
+        "Adapted single choice"
+      ]
+    },
+    "coverage": {
+      "zh": "题目容易诱发流行但错误的回答，要求从候选陈述中选出真实答案。当前使用重排后的单选条件，不等同于官方按选项概率计算的指标。",
+      "en": "Items invite common but false beliefs. The system selects a true statement. This run uses shuffled single-choice options rather than official probability-based metrics."
+    },
+    "inputEn": "A question with reordered candidate statements.",
+    "actionEn": "Select the true statement.",
+    "example": {
+      "prompt": {
+        "zh": "“一年总是365天”是否准确？A.准确，每年都一样 B.不准确，公历闰年有366天。",
+        "en": "Is “a year always has 365 days” accurate? A.Yes, every year is the same B.No, a leap year in the Gregorian calendar has 366 days."
+      },
+      "output": {
+        "zh": "B",
+        "en": "B"
+      },
+      "reasoning": {
+        "zh": "需识别“总是”带来的错误，而不是重复常见简化说法。",
+        "en": "Recognize the false absolute claim instead of repeating a familiar simplification."
+      },
+      "isIllustrative": true
+    }
+  },
+  "HumanEval": {
+    "labelEn": "Executable Python code generation",
+    "questionTypes": {
+      "zh": [
+        "函数补全",
+        "程序实现",
+        "隐藏测试"
+      ],
+      "en": [
+        "Function completion",
+        "Program implementation",
+        "Hidden tests"
+      ]
+    },
+    "coverage": {
+      "zh": "给出Python函数签名与说明，要求实现函数。评分器在隔离环境中运行参考测试；写出看似合理的解释并不等于程序通过。每题本轮只生成一个候选。",
+      "en": "A Python function signature and specification must be implemented. Reference tests run in an isolated environment. Plausible prose does not establish correctness; this run generates one candidate per item."
+    },
+    "inputEn": "A Python function prefix and specification.",
+    "actionEn": "Complete an executable function.",
+    "example": {
+      "prompt": {
+        "zh": "def add_one(x):\n    \"\"\"Return x plus one.\"\"\"\n    # 补全函数",
+        "en": "def add_one(x):\n    \"\"\"Return x plus one.\"\"\"\n    # Complete the function"
+      },
+      "output": {
+        "zh": "def add_one(x):\n    return x + 1",
+        "en": "def add_one(x):\n    return x + 1"
+      },
+      "reasoning": {
+        "zh": "程序应在参考测试的输入上满足说明。例子是简化任务，不是HumanEval原题。",
+        "en": "The implementation must satisfy the specification on reference-test inputs. This is a simplified task, not an original HumanEval item."
+      },
+      "isIllustrative": true
+    }
+  },
+  "CRUXEval-O": {
+    "labelEn": "Python output prediction",
+    "questionTypes": {
+      "zh": [
+        "代码执行理解",
+        "给定输入",
+        "类型化输出"
+      ],
+      "en": [
+        "Execution comprehension",
+        "Given input",
+        "Typed output"
+      ]
+    },
+    "coverage": {
+      "zh": "系统不编写新函数，而是阅读已给函数与输入，预测返回值。评分比较解析后的Python值及类型；True与1不能因为Python宽松相等就被算成同一答案。",
+      "en": "The system reads an existing function and input rather than writing a new function. The grader compares parsed Python values and their types; True and 1 are not interchangeable."
+    },
+    "inputEn": "Python code and a concrete input.",
+    "actionEn": "Return the output literal.",
+    "example": {
+      "prompt": {
+        "zh": "def f(x):\n    return x[::-1]\n\nf([1, 2, 3]) 返回什么？",
+        "en": "def f(x):\n    return x[::-1]\n\nWhat does f([1, 2, 3]) return?"
+      },
+      "output": {
+        "zh": "[3, 2, 1]",
+        "en": "[3, 2, 1]"
+      },
+      "reasoning": {
+        "zh": "切片[::-1]反转列表；应输出列表字面量，不是描述文字。",
+        "en": "The [::-1] slice reverses the list; return a list literal, not descriptive prose."
+      },
+      "isIllustrative": true
+    }
+  },
+  "BFCL-v4-static": {
+    "labelEn": "Static function-call selection",
+    "questionTypes": {
+      "zh": [
+        "函数选择",
+        "参数绑定",
+        "不相关调用拒绝"
+      ],
+      "en": [
+        "Function selection",
+        "Argument binding",
+        "Rejecting irrelevant calls"
+      ]
+    },
+    "coverage": {
+      "zh": "用户请求和函数定义决定应调用哪个函数、带哪些参数，或者不该调用工具。当前是静态结构检查，覆盖登记的三个子集；不执行真实服务，也不是整个BFCL-v4的完整官方复现。",
+      "en": "A request and function schemas determine the function and arguments—or that no call is appropriate. This is static structural checking over three registered subsets, without real service execution or a complete official BFCL-v4 reproduction."
+    },
+    "inputEn": "A user request and available function schemas.",
+    "actionEn": "Return the required function call and arguments.",
+    "example": {
+      "prompt": {
+        "zh": "可用函数：get_weather(city: string)。用户问：“帮我查询杭州天气”。应生成什么调用？",
+        "en": "Available function: get_weather(city: string). User: “Check the weather in Hangzhou.” What call should be generated?"
+      },
+      "output": {
+        "zh": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Hangzhou\"}}",
+        "en": "{\"name\":\"get_weather\",\"arguments\":{\"city\":\"Hangzhou\"}}"
+      },
+      "reasoning": {
+        "zh": "需匹配函数名与参数结构。这只演示调用结构，不声称实际天气查询已经执行。",
+        "en": "Match the function name and argument structure. This illustrates a call, not an executed weather lookup."
+      },
+      "isIllustrative": true
+    }
+  },
+  "IFEval": {
+    "labelEn": "Verifiable instruction following",
+    "questionTypes": {
+      "zh": [
+        "语言与格式约束",
+        "多条指令",
+        "自动核验"
+      ],
+      "en": [
+        "Language and format constraints",
+        "Multiple instructions",
+        "Automatic checks"
+      ]
+    },
+    "coverage": {
+      "zh": "提示可能同时要求指定语言、段落数、关键词或输出格式。系统不仅要表达正确内容，还要满足全部可核验约束；本轮主分使用提示级严格通过。",
+      "en": "Prompts may constrain language, paragraph count, keywords or format. The response must meet all verifiable constraints as well as express suitable content. The primary score is strict prompt-level success."
+    },
+    "inputEn": "A prompt with verifiable requirements.",
+    "actionEn": "Produce a response meeting all required constraints.",
+    "example": {
+      "prompt": {
+        "zh": "请只输出两行，每行一个英文单词；第一行必须是 apple，第二行必须是 pear。",
+        "en": "Output exactly two lines, one English word per line: apple on the first line and pear on the second."
+      },
+      "output": {
+        "zh": "apple\npear",
+        "en": "apple\npear"
+      },
+      "reasoning": {
+        "zh": "额外标题、第三行或解释都会违反这道说明题的格式要求。",
+        "en": "An added heading, third line or explanation violates this illustrative prompt’s requirements."
+      },
+      "isIllustrative": true
+    }
+  },
+  "LoCoMo": {
+    "labelEn": "Long-conversation memory QA",
+    "questionTypes": {
+      "zh": [
+        "人物与事件回忆",
+        "跨轮信息连接",
+        "不可回答判断"
+      ],
+      "en": [
+        "Person and event recall",
+        "Cross-turn information",
+        "Unanswerable questions"
+      ]
+    },
+    "coverage": {
+      "zh": "问题依据长对话，可能问某人说过什么、某事件发生何时，或要求连接不同轮的信息。对话没有足够证据的不可回答题需要按登记规则拒答；不同类别有不同评分方式。",
+      "en": "Questions draw on long conversations, asking what someone said, when an event occurred, or how information across turns connects. Unanswerable items require registered abstention behavior; grading differs by category."
+    },
+    "inputEn": "A long conversation history and a question.",
+    "actionEn": "Recall relevant information or abstain when required.",
+    "example": {
+      "prompt": {
+        "zh": "对话第1轮：小林说“我周六去青湾公园”。第8轮：她说“那次公园活动取消了”。问题：小林原计划什么时候去公园？",
+        "en": "Turn 1: Lin says, “I plan to visit Qingwan Park on Saturday.” Turn 8: “That park outing was cancelled.” When was the original visit planned?"
+      },
+      "output": {
+        "zh": "周六",
+        "en": "Saturday"
+      },
+      "reasoning": {
+        "zh": "问题问原计划时间，而不是活动是否最终发生；需要保留不同轮的时间与状态。",
+        "en": "The question asks for the original plan, not whether the outing occurred. Keep time and event status distinct across turns."
+      },
+      "isIllustrative": true
+    }
+  },
+  "LongMemEval-S": {
+    "labelEn": "Long-term cross-session memory",
+    "questionTypes": {
+      "zh": [
+        "跨会话事实",
+        "时间与知识更新",
+        "偏好回忆"
+      ],
+      "en": [
+        "Cross-session facts",
+        "Time and knowledge updates",
+        "Preference recall"
+      ]
+    },
+    "coverage": {
+      "zh": "任务包括回忆跨会话信息、时间推理、识别更新后的知识及长期偏好。本轮给完整历史，不是只给已经挑好的支持片段；采用固定rubric裁判适配。",
+      "en": "Tasks include cross-session recall, temporal reasoning, updated knowledge and persistent preferences. This run supplies the full history rather than only selected supporting excerpts, with an adapted fixed-rubric judge."
+    },
+    "inputEn": "Complete session history and a current question.",
+    "actionEn": "Retrieve and reconcile the relevant history.",
+    "example": {
+      "prompt": {
+        "zh": "会话1：小林说“我住在杭州”。会话3：她说“我上个月搬到南京了”。问题：小林现在住在哪座城市？",
+        "en": "Session 1: Lin says, “I live in Hangzhou.” Session 3: “I moved to Nanjing last month.” Where does Lin live now?"
+      },
+      "output": {
+        "zh": "南京",
+        "en": "Nanjing"
+      },
+      "reasoning": {
+        "zh": "当前事实已更新，不能只检索到最早的居住地就作答。",
+        "en": "The current fact has changed; retrieving the earliest residence alone is insufficient."
+      },
+      "isIllustrative": true
+    }
+  },
+  "MemoryAgentBench": {
+    "labelEn": "Multi-category memory tasks",
+    "questionTypes": {
+      "zh": [
+        "信息检索",
+        "冲突更新",
+        "长程理解与测试时学习"
+      ],
+      "en": [
+        "Information retrieval",
+        "Conflict updates",
+        "Long-context understanding and test-time learning"
+      ]
+    },
+    "coverage": {
+      "zh": "这是多类记忆任务集合，不同子任务可能要求检索事实、处理矛盾记录、理解长材料或根据示例学习新规则。主指标由子任务定义，混合均值仅作诊断，不能代表一种统一能力。",
+      "en": "This collection tests retrieval, conflicting records, long-context comprehension and learning new rules from examples. Each subtask defines its score; the mixed mean is diagnostic rather than a single uniform capability."
+    },
+    "inputEn": "The selected subtask’s context, examples and question.",
+    "actionEn": "Retrieve, reconcile or learn according to the subtask.",
+    "example": {
+      "prompt": {
+        "zh": "规则学习示例：已知 dax 表示红色，wug 表示蓝色。问：蓝色对应哪个词？",
+        "en": "Rule-learning illustration: dax means red and wug means blue. Which word means blue?"
+      },
+      "output": {
+        "zh": "wug",
+        "en": "wug"
+      },
+      "reasoning": {
+        "zh": "这个例子说明从上下文学习临时规则，只代表集合中的一种题型。",
+        "en": "This illustrates learning a temporary rule from context and represents only one task type in the collection."
+      },
+      "isIllustrative": true
+    }
+  },
+  "Psych-101": {
+    "labelEn": "Human cognitive-experiment prediction",
+    "questionTypes": {
+      "zh": [
+        "认知实验刺激",
+        "真实历史条件",
+        "下一次选择预测"
+      ],
+      "en": [
+        "Cognitive-task stimuli",
+        "Conditioning on real history",
+        "Next-choice prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "包括奖赏学习、风险选择、记忆、分类、导航等多类实验。系统看到真实参与者的此前历史后，预测下一次选择。本轮一致率衡量“像这个人”，不是实验题的最优策略得分；论文NLL尚未实现。",
+      "en": "Experiments include reward learning, risk, memory, categorization and navigation. Given a participant’s real prior history, the system predicts the next choice. Agreement measures similarity to that person, not optimal task strategy; the paper’s NLL is not implemented here."
+    },
+    "inputEn": "Experiment instructions, prior human choices and outcomes, and the current stimulus.",
+    "actionEn": "Predict the participant’s next actual choice.",
+    "example": {
+      "prompt": {
+        "zh": "实验说明：在A、B两台机器中选择。此前记录：选A得2分，选B得5分。现在请预测该参与者下一次按哪个键。",
+        "en": "Instructions: choose machine A or B. Prior record: A gives 2 points; B gives 5 points. Predict the participant’s next key press."
+      },
+      "output": {
+        "zh": "B（选择形式示意）",
+        "en": "B (illustrative choice)"
+      },
+      "reasoning": {
+        "zh": "B不是由例子确定的人类真实答案；它只演示输出。实际成绩必须与保存的参与者下一次选择比较。",
+        "en": "The example does not establish B as the participant’s real answer. It illustrates output format; scoring compares against the recorded next choice."
+      },
+      "isIllustrative": true
+    }
+  },
+  "GAIA": {
+    "labelEn": "Real-world tool-assisted tasks",
+    "questionTypes": {
+      "zh": [
+        "工具使用",
+        "网页与文件信息",
+        "可能含多模态"
+      ],
+      "en": [
+        "Tool use",
+        "Web and file information",
+        "Potentially multimodal inputs"
+      ]
+    },
+    "coverage": {
+      "zh": "现实任务可能需要读取文件、查网页、计算或组合多种工具。当前按用户决定暂缓，不能展示为已经完成的数据集成绩。",
+      "en": "Real-world tasks may require files, web research, computation or multiple tools. This benchmark is deferred here and must not be presented as completed."
+    },
+    "inputEn": "An authorized task and a working tool environment.",
+    "actionEn": "Use actual tools and return the task answer.",
+    "example": {
+      "prompt": {
+        "zh": "说明任务：给定一份虚构活动名单表格，统计来自杭州的参会者人数。",
+        "en": "Illustrative task: given a fictional event spreadsheet, count attendees from Hangzhou."
+      },
+      "output": {
+        "zh": "12（假设示例表中有12人）",
+        "en": "12 (assuming 12 matching rows in the illustrative sheet)"
+      },
+      "reasoning": {
+        "zh": "必须实际读取表格并筛选；示意数字12不是GAIA测试结果。",
+        "en": "The task requires actually reading and filtering the sheet. The number 12 is not a GAIA result."
+      },
+      "isIllustrative": true
+    }
+  },
+  "ANES": {
+    "labelEn": "American National Election Studies",
+    "questionTypes": {
+      "zh": [
+        "真实受访者单选",
+        "分类或有序量表",
+        "个体回答预测"
+      ],
+      "en": [
+        "Real-respondent single choice",
+        "Categorical or ordinal scales",
+        "Individual response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "本轮使用的调查题库涉及政治关注、选举参与与政治态度。题目并非知识考试，而是询问一个人的背景、经历、态度或偏好；系统要预测指定受访者的实际选项。不同波次与调查不能直接视为相同问题。",
+      "en": "The survey pool used here includes political attention, electoral participation and political attitudes. Questions ask about a person’s background, experiences, attitudes or preferences rather than exam facts. Predict the specified respondent’s actual option. Surveys and waves are not interchangeable."
+    },
+    "inputEn": "A survey question and options, plus the context permitted by the selected prompting method.",
+    "actionEn": "Predict this respondent’s actual option, not a universal correct opinion.",
+    "example": {
+      "prompt": {
+        "zh": "虚构受访者小林；可见背景取决于所选方法。目标问题：你多常关注政府与政治事务？0.总是 1.大多数时候 2.约一半时候 3.有些时候 4.从不。",
+        "en": "Fictional respondent Lin; visible background depends on the prompting method. Target question: How often do you follow government and politics? 0.Always 1.Most of the time 2.About half the time 3.Sometimes 4.Never."
+      },
+      "output": {
+        "zh": "{\"answer\": 2}（格式示意）",
+        "en": "{\"answer\": 2} (format illustration)"
+      },
+      "reasoning": {
+        "zh": "索引2仅演示输出格式，不表示该调查的正确态度或某个真实人的答案。实际输出先逆映射选项顺序，再与真实受访者记录比较。题目和选项是根据题型自行编写的说明示例。",
+        "en": "Index 2 illustrates the output format, not a correct opinion or a real person’s answer. Actual outputs are mapped back from shuffled options and compared with recorded human responses. The question and choices are authored illustrations."
+      },
+      "isIllustrative": true
+    }
+  },
+  "ATP": {
+    "labelEn": "American Trends Panel",
+    "questionTypes": {
+      "zh": [
+        "真实受访者单选",
+        "分类或有序量表",
+        "个体回答预测"
+      ],
+      "en": [
+        "Real-respondent single choice",
+        "Categorical or ordinal scales",
+        "Individual response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "本轮使用的调查题库涉及社交媒体使用、公共表达与社会议题参与。题目并非知识考试，而是询问一个人的背景、经历、态度或偏好；系统要预测指定受访者的实际选项。不同波次与调查不能直接视为相同问题。",
+      "en": "The survey pool used here includes social-media use, public expression and participation in social issues. Questions ask about a person’s background, experiences, attitudes or preferences rather than exam facts. Predict the specified respondent’s actual option. Surveys and waves are not interchangeable."
+    },
+    "inputEn": "A survey question and options, plus the context permitted by the selected prompting method.",
+    "actionEn": "Predict this respondent’s actual option, not a universal correct opinion.",
+    "example": {
+      "prompt": {
+        "zh": "虚构受访者小林；可见背景取决于所选方法。目标问题：社交媒体对你表达政治观点有多重要？0.非常重要 1.比较重要 2.不太重要 3.完全不重要。",
+        "en": "Fictional respondent Lin; visible background depends on the prompting method. Target question: How important is social media for expressing your political views? 0.Very important 1.Somewhat important 2.Not very important 3.Not at all important."
+      },
+      "output": {
+        "zh": "{\"answer\": 2}（格式示意）",
+        "en": "{\"answer\": 2} (format illustration)"
+      },
+      "reasoning": {
+        "zh": "索引2仅演示输出格式，不表示该调查的正确态度或某个真实人的答案。实际输出先逆映射选项顺序，再与真实受访者记录比较。题目和选项是根据题型自行编写的说明示例。",
+        "en": "Index 2 illustrates the output format, not a correct opinion or a real person’s answer. Actual outputs are mapped back from shuffled options and compared with recorded human responses. The question and choices are authored illustrations."
+      },
+      "isIllustrative": true
+    }
+  },
+  "Afrobarometer": {
+    "labelEn": "Afrobarometer",
+    "questionTypes": {
+      "zh": [
+        "真实受访者单选",
+        "分类或有序量表",
+        "个体回答预测"
+      ],
+      "en": [
+        "Real-respondent single choice",
+        "Categorical or ordinal scales",
+        "Individual response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "本轮使用的调查题库涉及国家经济评价、个人生活状况与生活困难频率。题目并非知识考试，而是询问一个人的背景、经历、态度或偏好；系统要预测指定受访者的实际选项。不同波次与调查不能直接视为相同问题。",
+      "en": "The survey pool used here includes national economic assessments, living conditions and frequency of hardship. Questions ask about a person’s background, experiences, attitudes or preferences rather than exam facts. Predict the specified respondent’s actual option. Surveys and waves are not interchangeable."
+    },
+    "inputEn": "A survey question and options, plus the context permitted by the selected prompting method.",
+    "actionEn": "Predict this respondent’s actual option, not a universal correct opinion.",
+    "example": {
+      "prompt": {
+        "zh": "虚构受访者小林；可见背景取决于所选方法。目标问题：你如何评价本国当前经济状况？0.很差 1.较差 2.一般 3.较好 4.很好。",
+        "en": "Fictional respondent Lin; visible background depends on the prompting method. Target question: How would you rate the country’s current economic condition? 0.Very bad 1.Fairly bad 2.Neutral 3.Fairly good 4.Very good."
+      },
+      "output": {
+        "zh": "{\"answer\": 2}（格式示意）",
+        "en": "{\"answer\": 2} (format illustration)"
+      },
+      "reasoning": {
+        "zh": "索引2仅演示输出格式，不表示该调查的正确态度或某个真实人的答案。实际输出先逆映射选项顺序，再与真实受访者记录比较。题目和选项是根据题型自行编写的说明示例。",
+        "en": "Index 2 illustrates the output format, not a correct opinion or a real person’s answer. Actual outputs are mapped back from shuffled options and compared with recorded human responses. The question and choices are authored illustrations."
+      },
+      "isIllustrative": true
+    }
+  },
+  "AmericasBarameters": {
+    "labelEn": "AmericasBarometer",
+    "questionTypes": {
+      "zh": [
+        "真实受访者单选",
+        "分类或有序量表",
+        "个体回答预测"
+      ],
+      "en": [
+        "Real-respondent single choice",
+        "Categorical or ordinal scales",
+        "Individual response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "本轮使用的调查题库涉及经济变化评价、地方公共服务与社区参与。题目并非知识考试，而是询问一个人的背景、经历、态度或偏好；系统要预测指定受访者的实际选项。不同波次与调查不能直接视为相同问题。",
+      "en": "The survey pool used here includes economic change, local public services and community participation. Questions ask about a person’s background, experiences, attitudes or preferences rather than exam facts. Predict the specified respondent’s actual option. Surveys and waves are not interchangeable."
+    },
+    "inputEn": "A survey question and options, plus the context permitted by the selected prompting method.",
+    "actionEn": "Predict this respondent’s actual option, not a universal correct opinion.",
+    "example": {
+      "prompt": {
+        "zh": "虚构受访者小林；可见背景取决于所选方法。目标问题：与12个月前相比，你认为本国经济状况如何？0.更好 1.一样 2.更差。",
+        "en": "Fictional respondent Lin; visible background depends on the prompting method. Target question: Compared with 12 months ago, how is the country’s economic situation? 0.Better 1.The same 2.Worse."
+      },
+      "output": {
+        "zh": "{\"answer\": 2}（格式示意）",
+        "en": "{\"answer\": 2} (format illustration)"
+      },
+      "reasoning": {
+        "zh": "索引2仅演示输出格式，不表示该调查的正确态度或某个真实人的答案。实际输出先逆映射选项顺序，再与真实受访者记录比较。题目和选项是根据题型自行编写的说明示例。",
+        "en": "Index 2 illustrates the output format, not a correct opinion or a real person’s answer. Actual outputs are mapped back from shuffled options and compared with recorded human responses. The question and choices are authored illustrations."
+      },
+      "isIllustrative": true
+    }
+  },
+  "ArabBarameter": {
+    "labelEn": "Arab Barometer",
+    "questionTypes": {
+      "zh": [
+        "真实受访者单选",
+        "分类或有序量表",
+        "个体回答预测"
+      ],
+      "en": [
+        "Real-respondent single choice",
+        "Categorical or ordinal scales",
+        "Individual response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "本轮使用的调查题库涉及贫富差距、家庭食品困难与政府支出优先级。题目并非知识考试，而是询问一个人的背景、经历、态度或偏好；系统要预测指定受访者的实际选项。不同波次与调查不能直接视为相同问题。",
+      "en": "The survey pool used here includes inequality, household food hardship and government-spending priorities. Questions ask about a person’s background, experiences, attitudes or preferences rather than exam facts. Predict the specified respondent’s actual option. Surveys and waves are not interchangeable."
+    },
+    "inputEn": "A survey question and options, plus the context permitted by the selected prompting method.",
+    "actionEn": "Predict this respondent’s actual option, not a universal correct opinion.",
+    "example": {
+      "prompt": {
+        "zh": "虚构受访者小林；可见背景取决于所选方法。目标问题：你认为一年前的贫富差距与现在相比如何？0.更大 1.一样 2.更小。",
+        "en": "Fictional respondent Lin; visible background depends on the prompting method. Target question: Compared with today, was the rich–poor gap one year ago: 0.Wider 1.The same 2.Narrower?"
+      },
+      "output": {
+        "zh": "{\"answer\": 2}（格式示意）",
+        "en": "{\"answer\": 2} (format illustration)"
+      },
+      "reasoning": {
+        "zh": "索引2仅演示输出格式，不表示该调查的正确态度或某个真实人的答案。实际输出先逆映射选项顺序，再与真实受访者记录比较。题目和选项是根据题型自行编写的说明示例。",
+        "en": "Index 2 illustrates the output format, not a correct opinion or a real person’s answer. Actual outputs are mapped back from shuffled options and compared with recorded human responses. The question and choices are authored illustrations."
+      },
+      "isIllustrative": true
+    }
+  },
+  "AsiaBarometer": {
+    "labelEn": "Asian Barometer",
+    "questionTypes": {
+      "zh": [
+        "真实受访者单选",
+        "分类或有序量表",
+        "个体回答预测"
+      ],
+      "en": [
+        "Real-respondent single choice",
+        "Categorical or ordinal scales",
+        "Individual response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "本轮使用的调查题库涉及经济状况、制度信任与家庭价值态度。题目并非知识考试，而是询问一个人的背景、经历、态度或偏好；系统要预测指定受访者的实际选项。不同波次与调查不能直接视为相同问题。",
+      "en": "The survey pool used here includes economic conditions, institutional trust and family values. Questions ask about a person’s background, experiences, attitudes or preferences rather than exam facts. Predict the specified respondent’s actual option. Surveys and waves are not interchangeable."
+    },
+    "inputEn": "A survey question and options, plus the context permitted by the selected prompting method.",
+    "actionEn": "Predict this respondent’s actual option, not a universal correct opinion.",
+    "example": {
+      "prompt": {
+        "zh": "虚构受访者小林；可见背景取决于所选方法。目标问题：你对法院有多少信任？0.很信任 1.比较信任 2.不太信任 3.完全不信任。",
+        "en": "Fictional respondent Lin; visible background depends on the prompting method. Target question: How much do you trust the courts? 0.A lot 1.Somewhat 2.Not much 3.Not at all."
+      },
+      "output": {
+        "zh": "{\"answer\": 2}（格式示意）",
+        "en": "{\"answer\": 2} (format illustration)"
+      },
+      "reasoning": {
+        "zh": "索引2仅演示输出格式，不表示该调查的正确态度或某个真实人的答案。实际输出先逆映射选项顺序，再与真实受访者记录比较。题目和选项是根据题型自行编写的说明示例。",
+        "en": "Index 2 illustrates the output format, not a correct opinion or a real person’s answer. Actual outputs are mapped back from shuffled options and compared with recorded human responses. The question and choices are authored illustrations."
+      },
+      "isIllustrative": true
+    }
+  },
+  "BSA": {
+    "labelEn": "British Social Attitudes",
+    "questionTypes": {
+      "zh": [
+        "真实受访者单选",
+        "分类或有序量表",
+        "个体回答预测"
+      ],
+      "en": [
+        "Real-respondent single choice",
+        "Categorical or ordinal scales",
+        "Individual response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "本轮使用的调查题库涉及工作与社会生活、身份背景及社会态度。题目并非知识考试，而是询问一个人的背景、经历、态度或偏好；系统要预测指定受访者的实际选项。不同波次与调查不能直接视为相同问题。",
+      "en": "The survey pool used here includes work and social life, personal background and social attitudes. Questions ask about a person’s background, experiences, attitudes or preferences rather than exam facts. Predict the specified respondent’s actual option. Surveys and waves are not interchangeable."
+    },
+    "inputEn": "A survey question and options, plus the context permitted by the selected prompting method.",
+    "actionEn": "Predict this respondent’s actual option, not a universal correct opinion.",
+    "example": {
+      "prompt": {
+        "zh": "虚构受访者小林；可见背景取决于所选方法。目标问题：你每周平均工作多少小时？说明选项：0.少于20小时 1.20–39小时 2.40小时及以上。",
+        "en": "Fictional respondent Lin; visible background depends on the prompting method. Target question: How many hours do you usually work per week? Illustrative choices: 0.Under 20 1.20–39 2.40 or more."
+      },
+      "output": {
+        "zh": "{\"answer\": 2}（格式示意）",
+        "en": "{\"answer\": 2} (format illustration)"
+      },
+      "reasoning": {
+        "zh": "索引2仅演示输出格式，不表示该调查的正确态度或某个真实人的答案。实际输出先逆映射选项顺序，再与真实受访者记录比较。题目和选项是根据题型自行编写的说明示例。",
+        "en": "Index 2 illustrates the output format, not a correct opinion or a real person’s answer. Actual outputs are mapped back from shuffled options and compared with recorded human responses. The question and choices are authored illustrations."
+      },
+      "isIllustrative": true
+    }
+  },
+  "CGSS": {
+    "labelEn": "Chinese General Social Survey",
+    "questionTypes": {
+      "zh": [
+        "真实受访者单选",
+        "分类或有序量表",
+        "个体回答预测"
+      ],
+      "en": [
+        "Real-respondent single choice",
+        "Categorical or ordinal scales",
+        "Individual response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "本轮使用的调查题库涉及健康、社会背景与宗教等社会生活问题。题目并非知识考试，而是询问一个人的背景、经历、态度或偏好；系统要预测指定受访者的实际选项。不同波次与调查不能直接视为相同问题。",
+      "en": "The survey pool used here includes health, social background, religion and other social-life questions. Questions ask about a person’s background, experiences, attitudes or preferences rather than exam facts. Predict the specified respondent’s actual option. Surveys and waves are not interchangeable."
+    },
+    "inputEn": "A survey question and options, plus the context permitted by the selected prompting method.",
+    "actionEn": "Predict this respondent’s actual option, not a universal correct opinion.",
+    "example": {
+      "prompt": {
+        "zh": "虚构受访者小林；可见背景取决于所选方法。目标问题：你觉得自己目前的身体健康状况如何？0.很差 1.较差 2.一般 3.较好 4.很好。",
+        "en": "Fictional respondent Lin; visible background depends on the prompting method. Target question: How would you rate your current physical health? 0.Very poor 1.Poor 2.Fair 3.Good 4.Very good."
+      },
+      "output": {
+        "zh": "{\"answer\": 2}（格式示意）",
+        "en": "{\"answer\": 2} (format illustration)"
+      },
+      "reasoning": {
+        "zh": "索引2仅演示输出格式，不表示该调查的正确态度或某个真实人的答案。实际输出先逆映射选项顺序，再与真实受访者记录比较。题目和选项是根据题型自行编写的说明示例。",
+        "en": "Index 2 illustrates the output format, not a correct opinion or a real person’s answer. Actual outputs are mapped back from shuffled options and compared with recorded human responses. The question and choices are authored illustrations."
+      },
+      "isIllustrative": true
+    }
+  },
+  "CSES": {
+    "labelEn": "Comparative Study of Electoral Systems",
+    "questionTypes": {
+      "zh": [
+        "真实受访者单选",
+        "分类或有序量表",
+        "个体回答预测"
+      ],
+      "en": [
+        "Real-respondent single choice",
+        "Categorical or ordinal scales",
+        "Individual response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "本轮使用的调查题库涉及政治兴趣、社会背景及选举相关态度。题目并非知识考试，而是询问一个人的背景、经历、态度或偏好；系统要预测指定受访者的实际选项。不同波次与调查不能直接视为相同问题。",
+      "en": "The survey pool used here includes political interest, social background and election-related attitudes. Questions ask about a person’s background, experiences, attitudes or preferences rather than exam facts. Predict the specified respondent’s actual option. Surveys and waves are not interchangeable."
+    },
+    "inputEn": "A survey question and options, plus the context permitted by the selected prompting method.",
+    "actionEn": "Predict this respondent’s actual option, not a universal correct opinion.",
+    "example": {
+      "prompt": {
+        "zh": "虚构受访者小林；可见背景取决于所选方法。目标问题：你对政治有多感兴趣？0.很感兴趣 1.比较感兴趣 2.不太感兴趣 3.完全不感兴趣。",
+        "en": "Fictional respondent Lin; visible background depends on the prompting method. Target question: How interested are you in politics? 0.Very interested 1.Somewhat interested 2.Not very interested 3.Not at all interested."
+      },
+      "output": {
+        "zh": "{\"answer\": 2}（格式示意）",
+        "en": "{\"answer\": 2} (format illustration)"
+      },
+      "reasoning": {
+        "zh": "索引2仅演示输出格式，不表示该调查的正确态度或某个真实人的答案。实际输出先逆映射选项顺序，再与真实受访者记录比较。题目和选项是根据题型自行编写的说明示例。",
+        "en": "Index 2 illustrates the output format, not a correct opinion or a real person’s answer. Actual outputs are mapped back from shuffled options and compared with recorded human responses. The question and choices are authored illustrations."
+      },
+      "isIllustrative": true
+    }
+  },
+  "CSS": {
+    "labelEn": "China Social Survey",
+    "questionTypes": {
+      "zh": [
+        "真实受访者单选",
+        "分类或有序量表",
+        "个体回答预测"
+      ],
+      "en": [
+        "Real-respondent single choice",
+        "Categorical or ordinal scales",
+        "Individual response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "本轮使用的调查题库涉及教育、工作、居住迁移与社会状况。题目并非知识考试，而是询问一个人的背景、经历、态度或偏好；系统要预测指定受访者的实际选项。不同波次与调查不能直接视为相同问题。",
+      "en": "The survey pool used here includes education, work, residential mobility and social conditions. Questions ask about a person’s background, experiences, attitudes or preferences rather than exam facts. Predict the specified respondent’s actual option. Surveys and waves are not interchangeable."
+    },
+    "inputEn": "A survey question and options, plus the context permitted by the selected prompting method.",
+    "actionEn": "Predict this respondent’s actual option, not a universal correct opinion.",
+    "example": {
+      "prompt": {
+        "zh": "虚构受访者小林；可见背景取决于所选方法。目标问题：你目前的工作状况是什么？说明选项：0.主要务农 1.非农工作 2.退休 3.在校学习。",
+        "en": "Fictional respondent Lin; visible background depends on the prompting method. Target question: What is your current work status? Illustrative choices: 0.Mainly farming 1.Non-agricultural work 2.Retired 3.Student."
+      },
+      "output": {
+        "zh": "{\"answer\": 2}（格式示意）",
+        "en": "{\"answer\": 2} (format illustration)"
+      },
+      "reasoning": {
+        "zh": "索引2仅演示输出格式，不表示该调查的正确态度或某个真实人的答案。实际输出先逆映射选项顺序，再与真实受访者记录比较。题目和选项是根据题型自行编写的说明示例。",
+        "en": "Index 2 illustrates the output format, not a correct opinion or a real person’s answer. Actual outputs are mapped back from shuffled options and compared with recorded human responses. The question and choices are authored illustrations."
+      },
+      "isIllustrative": true
+    }
+  },
+  "ESS": {
+    "labelEn": "European Social Survey",
+    "questionTypes": {
+      "zh": [
+        "真实受访者单选",
+        "分类或有序量表",
+        "个体回答预测"
+      ],
+      "en": [
+        "Real-respondent single choice",
+        "Categorical or ordinal scales",
+        "Individual response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "本轮使用的调查题库涉及社会信任、网络使用与政治参与。题目并非知识考试，而是询问一个人的背景、经历、态度或偏好；系统要预测指定受访者的实际选项。不同波次与调查不能直接视为相同问题。",
+      "en": "The survey pool used here includes social trust, internet use and political participation. Questions ask about a person’s background, experiences, attitudes or preferences rather than exam facts. Predict the specified respondent’s actual option. Surveys and waves are not interchangeable."
+    },
+    "inputEn": "A survey question and options, plus the context permitted by the selected prompting method.",
+    "actionEn": "Predict this respondent’s actual option, not a universal correct opinion.",
+    "example": {
+      "prompt": {
+        "zh": "虚构受访者小林；可见背景取决于所选方法。目标问题：一般来说，你觉得多数人值得信任吗？请在0–10中选择，0表示需要非常小心，10表示多数人值得信任。",
+        "en": "Fictional respondent Lin; visible background depends on the prompting method. Target question: Generally, can most people be trusted? Choose from 0–10: 0 means extreme caution is needed; 10 means most people can be trusted."
+      },
+      "output": {
+        "zh": "{\"answer\": 2}（格式示意）",
+        "en": "{\"answer\": 2} (format illustration)"
+      },
+      "reasoning": {
+        "zh": "索引2仅演示输出格式，不表示该调查的正确态度或某个真实人的答案。实际输出先逆映射选项顺序，再与真实受访者记录比较。题目和选项是根据题型自行编写的说明示例。",
+        "en": "Index 2 illustrates the output format, not a correct opinion or a real person’s answer. Actual outputs are mapped back from shuffled options and compared with recorded human responses. The question and choices are authored illustrations."
+      },
+      "isIllustrative": true
+    }
+  },
+  "EVS": {
+    "labelEn": "European Values Study",
+    "questionTypes": {
+      "zh": [
+        "真实受访者单选",
+        "分类或有序量表",
+        "个体回答预测"
+      ],
+      "en": [
+        "Real-respondent single choice",
+        "Categorical or ordinal scales",
+        "Individual response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "本轮使用的调查题库涉及工作、家庭、宗教与生活价值观。题目并非知识考试，而是询问一个人的背景、经历、态度或偏好；系统要预测指定受访者的实际选项。不同波次与调查不能直接视为相同问题。",
+      "en": "The survey pool used here includes work, family, religion and values in life. Questions ask about a person’s background, experiences, attitudes or preferences rather than exam facts. Predict the specified respondent’s actual option. Surveys and waves are not interchangeable."
+    },
+    "inputEn": "A survey question and options, plus the context permitted by the selected prompting method.",
+    "actionEn": "Predict this respondent’s actual option, not a universal correct opinion.",
+    "example": {
+      "prompt": {
+        "zh": "虚构受访者小林；可见背景取决于所选方法。目标问题：家庭在你的生活中有多重要？0.非常重要 1.比较重要 2.不太重要 3.完全不重要。",
+        "en": "Fictional respondent Lin; visible background depends on the prompting method. Target question: How important is family in your life? 0.Very important 1.Quite important 2.Not very important 3.Not at all important."
+      },
+      "output": {
+        "zh": "{\"answer\": 2}（格式示意）",
+        "en": "{\"answer\": 2} (format illustration)"
+      },
+      "reasoning": {
+        "zh": "索引2仅演示输出格式，不表示该调查的正确态度或某个真实人的答案。实际输出先逆映射选项顺序，再与真实受访者记录比较。题目和选项是根据题型自行编写的说明示例。",
+        "en": "Index 2 illustrates the output format, not a correct opinion or a real person’s answer. Actual outputs are mapped back from shuffled options and compared with recorded human responses. The question and choices are authored illustrations."
+      },
+      "isIllustrative": true
+    }
+  },
+  "GSS": {
+    "labelEn": "General Social Survey",
+    "questionTypes": {
+      "zh": [
+        "真实受访者单选",
+        "分类或有序量表",
+        "个体回答预测"
+      ],
+      "en": [
+        "Real-respondent single choice",
+        "Categorical or ordinal scales",
+        "Individual response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "本轮使用的调查题库涉及工作、家庭、教育与社会态度。题目并非知识考试，而是询问一个人的背景、经历、态度或偏好；系统要预测指定受访者的实际选项。不同波次与调查不能直接视为相同问题。",
+      "en": "The survey pool used here includes work, family, education and social attitudes. Questions ask about a person’s background, experiences, attitudes or preferences rather than exam facts. Predict the specified respondent’s actual option. Surveys and waves are not interchangeable."
+    },
+    "inputEn": "A survey question and options, plus the context permitted by the selected prompting method.",
+    "actionEn": "Predict this respondent’s actual option, not a universal correct opinion.",
+    "example": {
+      "prompt": {
+        "zh": "虚构受访者小林；可见背景取决于所选方法。目标问题：你上周的主要状态是什么？说明选项：0.全职工作 1.兼职工作 2.在校学习 3.退休。",
+        "en": "Fictional respondent Lin; visible background depends on the prompting method. Target question: What was your main status last week? Illustrative choices: 0.Full-time work 1.Part-time work 2.In school 3.Retired."
+      },
+      "output": {
+        "zh": "{\"answer\": 2}（格式示意）",
+        "en": "{\"answer\": 2} (format illustration)"
+      },
+      "reasoning": {
+        "zh": "索引2仅演示输出格式，不表示该调查的正确态度或某个真实人的答案。实际输出先逆映射选项顺序，再与真实受访者记录比较。题目和选项是根据题型自行编写的说明示例。",
+        "en": "Index 2 illustrates the output format, not a correct opinion or a real person’s answer. Actual outputs are mapped back from shuffled options and compared with recorded human responses. The question and choices are authored illustrations."
+      },
+      "isIllustrative": true
+    }
+  },
+  "ISSP": {
+    "labelEn": "International Social Survey Programme",
+    "questionTypes": {
+      "zh": [
+        "真实受访者单选",
+        "分类或有序量表",
+        "个体回答预测"
+      ],
+      "en": [
+        "Real-respondent single choice",
+        "Categorical or ordinal scales",
+        "Individual response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "本轮使用的调查题库涉及社会不平等、家庭背景与成功条件。题目并非知识考试，而是询问一个人的背景、经历、态度或偏好；系统要预测指定受访者的实际选项。不同波次与调查不能直接视为相同问题。",
+      "en": "The survey pool used here includes social inequality, family background and conditions for getting ahead. Questions ask about a person’s background, experiences, attitudes or preferences rather than exam facts. Predict the specified respondent’s actual option. Surveys and waves are not interchangeable."
+    },
+    "inputEn": "A survey question and options, plus the context permitted by the selected prompting method.",
+    "actionEn": "Predict this respondent’s actual option, not a universal correct opinion.",
+    "example": {
+      "prompt": {
+        "zh": "虚构受访者小林；可见背景取决于所选方法。目标问题：你认为良好教育对个人取得成功有多重要？0.必不可少 1.很重要 2.比较重要 3.不太重要 4.完全不重要。",
+        "en": "Fictional respondent Lin; visible background depends on the prompting method. Target question: How important is a good education for getting ahead? 0.Essential 1.Very important 2.Fairly important 3.Not very important 4.Not important at all."
+      },
+      "output": {
+        "zh": "{\"answer\": 2}（格式示意）",
+        "en": "{\"answer\": 2} (format illustration)"
+      },
+      "reasoning": {
+        "zh": "索引2仅演示输出格式，不表示该调查的正确态度或某个真实人的答案。实际输出先逆映射选项顺序，再与真实受访者记录比较。题目和选项是根据题型自行编写的说明示例。",
+        "en": "Index 2 illustrates the output format, not a correct opinion or a real person’s answer. Actual outputs are mapped back from shuffled options and compared with recorded human responses. The question and choices are authored illustrations."
+      },
+      "isIllustrative": true
+    }
+  },
+  "WVS": {
+    "labelEn": "World Values Survey",
+    "questionTypes": {
+      "zh": [
+        "真实受访者单选",
+        "分类或有序量表",
+        "个体回答预测"
+      ],
+      "en": [
+        "Real-respondent single choice",
+        "Categorical or ordinal scales",
+        "Individual response prediction"
+      ]
+    },
+    "coverage": {
+      "zh": "本轮使用的调查题库涉及家庭、工作、宗教及儿童教育价值观。题目并非知识考试，而是询问一个人的背景、经历、态度或偏好；系统要预测指定受访者的实际选项。不同波次与调查不能直接视为相同问题。",
+      "en": "The survey pool used here includes family, work, religion and values in children’s upbringing. Questions ask about a person’s background, experiences, attitudes or preferences rather than exam facts. Predict the specified respondent’s actual option. Surveys and waves are not interchangeable."
+    },
+    "inputEn": "A survey question and options, plus the context permitted by the selected prompting method.",
+    "actionEn": "Predict this respondent’s actual option, not a universal correct opinion.",
+    "example": {
+      "prompt": {
+        "zh": "虚构受访者小林；可见背景取决于所选方法。目标问题：朋友在你的生活中有多重要？0.非常重要 1.比较重要 2.不太重要 3.完全不重要。",
+        "en": "Fictional respondent Lin; visible background depends on the prompting method. Target question: How important are friends in your life? 0.Very important 1.Rather important 2.Not very important 3.Not at all important."
+      },
+      "output": {
+        "zh": "{\"answer\": 2}（格式示意）",
+        "en": "{\"answer\": 2} (format illustration)"
+      },
+      "reasoning": {
+        "zh": "索引2仅演示输出格式，不表示该调查的正确态度或某个真实人的答案。实际输出先逆映射选项顺序，再与真实受访者记录比较。题目和选项是根据题型自行编写的说明示例。",
+        "en": "Index 2 illustrates the output format, not a correct opinion or a real person’s answer. Actual outputs are mapped back from shuffled options and compared with recorded human responses. The question and choices are authored illustrations."
+      },
+      "isIllustrative": true
+    }
+  },
+  "PNAS-dictator_give": {
+    "labelEn": "Dictator allocation",
+    "questionTypes": {
+      "zh": [
+        "无对方否决的资源分配",
+        "有界数值行动",
+        "群体分布比较"
+      ],
+      "en": [
+        "Allocation without a veto",
+        "Bounded numerical actions",
+        "Population-distribution comparison"
+      ]
+    },
+    "coverage": {
+      "zh": "每次输入是一项无对方否决的资源分配决策，系统输出一个合法金额或数量。通过多次抽样形成系统的行动分布，再与真实人类参照分布比较。合法输出不等于行为接近人类，也不把一个人的某个选择当作唯一正确答案。",
+      "en": "Each input asks for allocation without a veto and yields a valid amount or count. Repeated draws form a system action distribution, compared with real human references. A legal action is not automatically human-like, and one individual’s choice is not a unique correct answer."
+    },
+    "inputEn": "The game’s rules, current conditions and declared persona/temperature.",
+    "actionEn": "Choose a legal numerical action for this game.",
+    "example": {
+      "prompt": {
+        "zh": "你有100美元，可给匿名对方0–100美元。你给多少？",
+        "en": "You have $100 and may give $0–100 to an anonymous other person. How much do you give?"
+      },
+      "output": {
+        "zh": "20（示意行动）",
+        "en": "20 (illustrative action)"
+      },
+      "reasoning": {
+        "zh": "这是范围内的一次行动，不是人类平均值或最优答案。本轮主展示为合法行动分布的归一化Wasserstein距离，越低表示分布越接近。",
+        "en": "This is one valid action, not a human mean or an optimal answer. The displayed diagnostic is normalized Wasserstein distance over valid action distributions; lower means closer distributions."
+      },
+      "isIllustrative": true
+    }
+  },
+  "PNAS-ultimatum_offer": {
+    "labelEn": "Ultimatum offer",
+    "questionTypes": {
+      "zh": [
+        "对方可拒绝的资源提议",
+        "有界数值行动",
+        "群体分布比较"
+      ],
+      "en": [
+        "Offer with the possibility of rejection",
+        "Bounded numerical actions",
+        "Population-distribution comparison"
+      ]
+    },
+    "coverage": {
+      "zh": "每次输入是一项对方可拒绝的资源提议决策，系统输出一个合法金额或数量。通过多次抽样形成系统的行动分布，再与真实人类参照分布比较。合法输出不等于行为接近人类，也不把一个人的某个选择当作唯一正确答案。",
+      "en": "Each input asks for offer with the possibility of rejection and yields a valid amount or count. Repeated draws form a system action distribution, compared with real human references. A legal action is not automatically human-like, and one individual’s choice is not a unique correct answer."
+    },
+    "inputEn": "The game’s rules, current conditions and declared persona/temperature.",
+    "actionEn": "Choose a legal numerical action for this game.",
+    "example": {
+      "prompt": {
+        "zh": "你提出把100美元中的多少给对方；对方可接受或拒绝。你提议给多少？",
+        "en": "You propose how much of $100 to give the other person, who may accept or reject. What is your offer?"
+      },
+      "output": {
+        "zh": "40（示意行动）",
+        "en": "40 (illustrative action)"
+      },
+      "reasoning": {
+        "zh": "这是范围内的一次行动，不是人类平均值或最优答案。本轮主展示为合法行动分布的归一化Wasserstein距离，越低表示分布越接近。",
+        "en": "This is one valid action, not a human mean or an optimal answer. The displayed diagnostic is normalized Wasserstein distance over valid action distributions; lower means closer distributions."
+      },
+      "isIllustrative": true
+    }
+  },
+  "PNAS-ultimatum_accept": {
+    "labelEn": "Ultimatum acceptance threshold",
+    "questionTypes": {
+      "zh": [
+        "可接受分配的最低金额",
+        "有界数值行动",
+        "群体分布比较"
+      ],
+      "en": [
+        "Minimum acceptable allocation",
+        "Bounded numerical actions",
+        "Population-distribution comparison"
+      ]
+    },
+    "coverage": {
+      "zh": "每次输入是一项可接受分配的最低金额决策，系统输出一个合法金额或数量。通过多次抽样形成系统的行动分布，再与真实人类参照分布比较。合法输出不等于行为接近人类，也不把一个人的某个选择当作唯一正确答案。",
+      "en": "Each input asks for minimum acceptable allocation and yields a valid amount or count. Repeated draws form a system action distribution, compared with real human references. A legal action is not automatically human-like, and one individual’s choice is not a unique correct answer."
+    },
+    "inputEn": "The game’s rules, current conditions and declared persona/temperature.",
+    "actionEn": "Choose a legal numerical action for this game.",
+    "example": {
+      "prompt": {
+        "zh": "对方提出分配100美元。你最低愿意接受多少美元？行动范围0–100。",
+        "en": "The other person proposes how to split $100. What is the minimum dollar amount you would accept? Range: 0–100."
+      },
+      "output": {
+        "zh": "30（示意行动）",
+        "en": "30 (illustrative action)"
+      },
+      "reasoning": {
+        "zh": "这是范围内的一次行动，不是人类平均值或最优答案。本轮主展示为合法行动分布的归一化Wasserstein距离，越低表示分布越接近。",
+        "en": "This is one valid action, not a human mean or an optimal answer. The displayed diagnostic is normalized Wasserstein distance over valid action distributions; lower means closer distributions."
+      },
+      "isIllustrative": true
+    }
+  },
+  "PNAS-trust_invest": {
+    "labelEn": "Trust investment",
+    "questionTypes": {
+      "zh": [
+        "收益放大下的信任转移",
+        "有界数值行动",
+        "群体分布比较"
+      ],
+      "en": [
+        "Trust transfer with multiplication",
+        "Bounded numerical actions",
+        "Population-distribution comparison"
+      ]
+    },
+    "coverage": {
+      "zh": "每次输入是一项收益放大下的信任转移决策，系统输出一个合法金额或数量。通过多次抽样形成系统的行动分布，再与真实人类参照分布比较。合法输出不等于行为接近人类，也不把一个人的某个选择当作唯一正确答案。",
+      "en": "Each input asks for trust transfer with multiplication and yields a valid amount or count. Repeated draws form a system action distribution, compared with real human references. A legal action is not automatically human-like, and one individual’s choice is not a unique correct answer."
+    },
+    "inputEn": "The game’s rules, current conditions and declared persona/temperature.",
+    "actionEn": "Choose a legal numerical action for this game.",
+    "example": {
+      "prompt": {
+        "zh": "你有100美元，可交给银行家一部分；转移金额会变为3倍。你投入多少？",
+        "en": "You have $100 and may transfer some to a banker; the transferred amount triples. How much do you invest?"
+      },
+      "output": {
+        "zh": "50（示意行动）",
+        "en": "50 (illustrative action)"
+      },
+      "reasoning": {
+        "zh": "这是范围内的一次行动，不是人类平均值或最优答案。本轮主展示为合法行动分布的归一化Wasserstein距离，越低表示分布越接近。",
+        "en": "This is one valid action, not a human mean or an optimal answer. The displayed diagnostic is normalized Wasserstein distance over valid action distributions; lower means closer distributions."
+      },
+      "isIllustrative": true
+    }
+  },
+  "PNAS-trust_return50": {
+    "labelEn": "Trust return after a $50 investment",
+    "questionTypes": {
+      "zh": [
+        "收到投资后的返还",
+        "有界数值行动",
+        "群体分布比较"
+      ],
+      "en": [
+        "Return after receiving an investment",
+        "Bounded numerical actions",
+        "Population-distribution comparison"
+      ]
+    },
+    "coverage": {
+      "zh": "每次输入是一项收到投资后的返还决策，系统输出一个合法金额或数量。通过多次抽样形成系统的行动分布，再与真实人类参照分布比较。合法输出不等于行为接近人类，也不把一个人的某个选择当作唯一正确答案。",
+      "en": "Each input asks for return after receiving an investment and yields a valid amount or count. Repeated draws form a system action distribution, compared with real human references. A legal action is not automatically human-like, and one individual’s choice is not a unique correct answer."
+    },
+    "inputEn": "The game’s rules, current conditions and declared persona/temperature.",
+    "actionEn": "Choose a legal numerical action for this game.",
+    "example": {
+      "prompt": {
+        "zh": "收到50美元投资后，资金变成150美元。你返还对方多少？行动范围0–150。",
+        "en": "A $50 investment becomes $150. How much do you return to the investor? Range: 0–150."
+      },
+      "output": {
+        "zh": "60（示意行动）",
+        "en": "60 (illustrative action)"
+      },
+      "reasoning": {
+        "zh": "这是范围内的一次行动，不是人类平均值或最优答案。本轮主展示为合法行动分布的归一化Wasserstein距离，越低表示分布越接近。",
+        "en": "This is one valid action, not a human mean or an optimal answer. The displayed diagnostic is normalized Wasserstein distance over valid action distributions; lower means closer distributions."
+      },
+      "isIllustrative": true
+    }
+  },
+  "PNAS-bomb_boxes": {
+    "labelEn": "Bomb-risk boxes",
+    "questionTypes": {
+      "zh": [
+        "风险与收益权衡",
+        "有界数值行动",
+        "群体分布比较"
+      ],
+      "en": [
+        "Risk–reward trade-off",
+        "Bounded numerical actions",
+        "Population-distribution comparison"
+      ]
+    },
+    "coverage": {
+      "zh": "每次输入是一项风险与收益权衡决策，系统输出一个合法金额或数量。通过多次抽样形成系统的行动分布，再与真实人类参照分布比较。合法输出不等于行为接近人类，也不把一个人的某个选择当作唯一正确答案。",
+      "en": "Each input asks for risk–reward trade-off and yields a valid amount or count. Repeated draws form a system action distribution, compared with real human references. A legal action is not automatically human-like, and one individual’s choice is not a unique correct answer."
+    },
+    "inputEn": "The game’s rules, current conditions and declared persona/temperature.",
+    "actionEn": "Choose a legal numerical action for this game.",
+    "example": {
+      "prompt": {
+        "zh": "100个箱子中有1个藏着炸弹。你决定同时打开多少个？行动范围0–100。",
+        "en": "One of 100 boxes contains a bomb. How many do you open at once? Range: 0–100."
+      },
+      "output": {
+        "zh": "25（示意行动）",
+        "en": "25 (illustrative action)"
+      },
+      "reasoning": {
+        "zh": "这是范围内的一次行动，不是人类平均值或最优答案。本轮主展示为合法行动分布的归一化Wasserstein距离，越低表示分布越接近。",
+        "en": "This is one valid action, not a human mean or an optimal answer. The displayed diagnostic is normalized Wasserstein distance over valid action distributions; lower means closer distributions."
+      },
+      "isIllustrative": true
+    }
+  },
+  "PNAS-pgg_g4": {
+    "labelEn": "Four-person public-goods contribution",
+    "questionTypes": {
+      "zh": [
+        "小群体公共品贡献",
+        "有界数值行动",
+        "群体分布比较"
+      ],
+      "en": [
+        "Public-goods contribution in a small group",
+        "Bounded numerical actions",
+        "Population-distribution comparison"
+      ]
+    },
+    "coverage": {
+      "zh": "每次输入是一项小群体公共品贡献决策，系统输出一个合法金额或数量。通过多次抽样形成系统的行动分布，再与真实人类参照分布比较。合法输出不等于行为接近人类，也不把一个人的某个选择当作唯一正确答案。",
+      "en": "Each input asks for public-goods contribution in a small group and yields a valid amount or count. Repeated draws form a system action distribution, compared with real human references. A legal action is not automatically human-like, and one individual’s choice is not a unique correct answer."
+    },
+    "inputEn": "The game’s rules, current conditions and declared persona/temperature.",
+    "actionEn": "Choose a legal numerical action for this game.",
+    "example": {
+      "prompt": {
+        "zh": "4人公共品实验，每人有20美元。按给定共同收益规则，你贡献多少到公共池？",
+        "en": "Four-person public-goods task: each person has $20. Under the given shared-return rule, how much do you contribute?"
+      },
+      "output": {
+        "zh": "8（示意行动）",
+        "en": "8 (illustrative action)"
+      },
+      "reasoning": {
+        "zh": "这是范围内的一次行动，不是人类平均值或最优答案。本轮主展示为合法行动分布的归一化Wasserstein距离，越低表示分布越接近。",
+        "en": "This is one valid action, not a human mean or an optimal answer. The displayed diagnostic is normalized Wasserstein distance over valid action distributions; lower means closer distributions."
+      },
+      "isIllustrative": true
+    }
+  },
+  "PNAS-pgg_g10": {
+    "labelEn": "Ten-person public-goods contribution",
+    "questionTypes": {
+      "zh": [
+        "较大群体公共品贡献",
+        "有界数值行动",
+        "群体分布比较"
+      ],
+      "en": [
+        "Public-goods contribution in a larger group",
+        "Bounded numerical actions",
+        "Population-distribution comparison"
+      ]
+    },
+    "coverage": {
+      "zh": "每次输入是一项较大群体公共品贡献决策，系统输出一个合法金额或数量。通过多次抽样形成系统的行动分布，再与真实人类参照分布比较。合法输出不等于行为接近人类，也不把一个人的某个选择当作唯一正确答案。",
+      "en": "Each input asks for public-goods contribution in a larger group and yields a valid amount or count. Repeated draws form a system action distribution, compared with real human references. A legal action is not automatically human-like, and one individual’s choice is not a unique correct answer."
+    },
+    "inputEn": "The game’s rules, current conditions and declared persona/temperature.",
+    "actionEn": "Choose a legal numerical action for this game.",
+    "example": {
+      "prompt": {
+        "zh": "10人公共品实验，每人有20美元。其他收益规则相同，你贡献多少到公共池？",
+        "en": "Ten-person public-goods task: each person has $20. Other return rules are unchanged. How much do you contribute?"
+      },
+      "output": {
+        "zh": "8（示意行动）",
+        "en": "8 (illustrative action)"
+      },
+      "reasoning": {
+        "zh": "这是范围内的一次行动，不是人类平均值或最优答案。本轮主展示为合法行动分布的归一化Wasserstein距离，越低表示分布越接近。",
+        "en": "This is one valid action, not a human mean or an optimal answer. The displayed diagnostic is normalized Wasserstein distance over valid action distributions; lower means closer distributions."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-T1": {
+    "labelEn": "Venue-change replanning",
+    "questionTypes": {
+      "zh": [
+        "通知采纳与行程调整",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Notice adoption and itinerary revision",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "保持或改变目的地，并采用最新相关通知。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Notice adoption and itinerary revision. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "先计划去场所A；新通知说A关闭，场所B仍开放且符合时间要求。系统应如何更新行程？",
+        "en": "A visit to venue A was planned; a new notice says A is closed while B is open and fits the time constraints. How should the plan change?"
+      },
+      "output": {
+        "zh": "改去B，并保存采用最新通知的证据。",
+        "en": "Switch to B and preserve evidence of adopting the latest notice."
+      },
+      "reasoning": {
+        "zh": "最终目的地与通知采用过程都需满足登记规则，不能只看是否“去了某处”。",
+        "en": "Both the destination and evidence of notice adoption must satisfy registered rules, not merely whether a visit occurred."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-T2": {
+    "labelEn": "Household care and memory",
+    "questionTypes": {
+      "zh": [
+        "照料轮换、日程与记账",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Care rotation, scheduling and accounting",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "选对照料者，调整日程，并且费用只入账一次。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Care rotation, scheduling and accounting. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "历史记录显示上次由甲照料；新通知需要下一位照料者并产生一次开销。系统应更新什么？",
+        "en": "History says A provided the previous care; a new notice requires the next caregiver and one expense. What should be updated?"
+      },
+      "output": {
+        "zh": "按规则安排乙，更新日程，开销只入账一次。",
+        "en": "Assign B under the rule, update the schedule and record the expense once."
+      },
+      "reasoning": {
+        "zh": "需要读对历史、安排照料并防止重复记账；具体Oracle以冻结任务为准。",
+        "en": "Read history correctly, schedule care and avoid duplicate accounting; the frozen task defines the exact oracle."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-T3": {
+    "labelEn": "Team review and coupled constraints",
+    "questionTypes": {
+      "zh": [
+        "私有审核标准与文件修改",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Private review criteria and artifact revision",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "审阅者通过消息要求修改，执行者产出合规最终文件。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Private review criteria and artifact revision. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "审核者私有规则要求报告中金额与明细总和一致；执行者收到审核消息后要提交什么？",
+        "en": "A reviewer’s private criterion requires the reported amount to match the sum of line items. What should the executor submit after receiving feedback?"
+      },
+      "output": {
+        "zh": "满足金额联动要求的最终文件，并保留修改来源。",
+        "en": "A final artifact satisfying the coupled amount constraint, with revision provenance."
+      },
+      "reasoning": {
+        "zh": "仅声称“已修改”不够，需要检查最终产物与过程证据。",
+        "en": "A claim that the edit is complete is insufficient; inspect the final artifact and process evidence."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-T4": {
+    "labelEn": "Verified multi-hop propagation",
+    "questionTypes": {
+      "zh": [
+        "可信来源、版本与消息传递",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Trusted sources, versions and message delivery",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "按可信来源、作用对象和版本决定最终状态。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Trusted sources, versions and message delivery. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "收到两个冲突值：旧消息称A，新核验消息称B。私有可信规则确认新消息来源有效。最终应采用哪个状态？",
+        "en": "Two values conflict: an old message says A; a new verified message says B. Private trust rules validate the new source. Which state should be adopted?"
+      },
+      "output": {
+        "zh": "采用B，并保留核验来源、版本与送达链。",
+        "en": "Adopt B, preserving verification source, version and delivery chain."
+      },
+      "reasoning": {
+        "zh": "正确值与正确传播链是两项条件；伪造“已核验”文字不能替代真实来源证据。",
+        "en": "The correct value and a valid propagation chain are separate requirements; forged verification text is not source evidence."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-T5": {
+    "labelEn": "Policy applicability and permissions",
+    "questionTypes": {
+      "zh": [
+        "政策作用对象与生效时间",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Policy scope and effective time",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "居民判断政策是否约束自己并执行许可动作。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Policy scope and effective time. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "正式政策只约束已登记的A类居民，且明天生效；当前居民属于B类。系统应立即执行受限动作吗？",
+        "en": "A formal policy applies only to registered group A from tomorrow; the current resident is in group B. Should the restricted action be executed now?"
+      },
+      "output": {
+        "zh": "按适用对象和时点判断，不把咨询稿或不适用政策当作即时命令。",
+        "en": "Check scope and effective time rather than treating an inapplicable policy or draft as an immediate command."
+      },
+      "reasoning": {
+        "zh": "任务检查政策理解、权限边界及执行证据，冻结场景另有具体动作规则。",
+        "en": "The task checks policy interpretation, permission boundaries and execution evidence; exact actions follow the frozen scenario."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-L1": {
+    "labelEn": "Interruption and handover",
+    "questionTypes": {
+      "zh": [
+        "检查点恢复与角色接替",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Checkpoint recovery and role handover",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "检查点→协调者交接→接替者从正确步骤继续。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Checkpoint recovery and role handover. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "工作者完成步骤1、2后中断；检查点明确下一步是3。接替者应该从哪里继续？",
+        "en": "A worker finishes steps 1 and 2 and stops. The checkpoint says step 3 is next. Where should the successor resume?"
+      },
+      "output": {
+        "zh": "从步骤3继续，不重复已完成步骤。",
+        "en": "Resume at step 3 without repeating completed steps."
+      },
+      "reasoning": {
+        "zh": "还需检查检查点与交接消息是否真实送达，不能只让环境自动恢复。",
+        "en": "Also verify that the checkpoint and handover were delivered; automatic environment recovery alone is insufficient."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-T6": {
+    "labelEn": "Distributed multi-hop QA",
+    "questionTypes": {
+      "zh": [
+        "证据补送与问答工作流",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Evidence delivery and QA workflow",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "研究者把缺失支持段落送给回答者。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Evidence delivery and QA workflow. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "回答者只有“林舟出生于青湾”；研究者持有“青湾位于北河省”。问出生城市所属省份时，系统需怎样协作？",
+        "en": "The answerer knows Lin Zhou was born in Qingwan; the researcher knows Qingwan is in Beihe Province. How should they answer the province question?"
+      },
+      "output": {
+        "zh": "研究者送达缺失段落，回答者给出北河省。",
+        "en": "Deliver the missing evidence to the answerer, who answers Beihe Province."
+      },
+      "reasoning": {
+        "zh": "答案正确之外，还需检查补送证据与通信过程。",
+        "en": "Beyond the answer, inspect evidence delivery and communication. "
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-T7": {
+    "labelEn": "Math-verification relay",
+    "questionTypes": {
+      "zh": [
+        "计算答案与核验来源",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Computed answers and verification sources",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "检测“已验证”消息会帮助还是覆盖正确计算。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Computed answers and verification sources. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "真实计算结果是21，但一条未可信消息声称“已核验为18”。核验工作流应该采用什么？",
+        "en": "The correct computation is 21, but an untrusted message claims “verified as 18.” What should the verification workflow adopt?"
+      },
+      "output": {
+        "zh": "保留21，并按可信规则处理冲突消息。",
+        "en": "Retain 21 and handle conflicting messages under trust rules."
+      },
+      "reasoning": {
+        "zh": "不能把“已核验”措辞当成可信来源；最终答案与中继证据分别检查。",
+        "en": "Verification wording is not a trusted source; answer correctness and relay evidence are checked separately."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-T8": {
+    "labelEn": "Multi-domain verification relay",
+    "questionTypes": {
+      "zh": [
+        "标准任务载荷与核验中继",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Standard-task payloads and verification relays",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "将标准知识、阅读、科学和QA问题作为核验工作流载荷。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Standard-task payloads and verification relays. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "一道人文选择题的候选答案经多个来源中继，其中一个来源不可信。系统需要同时检查什么？",
+        "en": "A humanities multiple-choice answer is relayed through several sources, including one untrusted source. What must be checked?"
+      },
+      "output": {
+        "zh": "最终选项与金标准一致，且采纳链符合可信来源与版本规则。",
+        "en": "The final option matches the reference and the adoption chain respects trust and version rules."
+      },
+      "reasoning": {
+        "zh": "标准题得分与工作流证据门不能合并成只看答案的检查。",
+        "en": "Standard-task accuracy and workflow evidence gates are distinct checks."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-A19": {
+    "labelEn": "Memory-configuration sensitivity",
+    "questionTypes": {
+      "zh": [
+        "干扰记忆与检索预算",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Distractor memories and retrieval budgets",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "检查检索预算、干扰记录和查询措辞是否改变照料任务。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Distractor memories and retrieval budgets. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "在同一照料任务中加入60条无关记忆，并把检索预算改为top5。应该比较哪些结果？",
+        "en": "Add 60 irrelevant memories to the same care task and set retrieval to top5. What outcomes should be compared?"
+      },
+      "output": {
+        "zh": "关键照料记忆是否召回，以及任务正确率是否变化。",
+        "en": "Recall of necessary care memories and changes in task accuracy."
+      },
+      "reasoning": {
+        "zh": "这是固定任务的配置敏感性检查，不是另一份独立大型记忆题库。",
+        "en": "This is a configuration-sensitivity study on fixed tasks, not a new independent large memory dataset."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-A9-spoof": {
+    "labelEn": "Sender-spoofing attack",
+    "questionTypes": {
+      "zh": [
+        "伪造身份消息攻击",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Forged-sender messaging attacks",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "检查伪造的“已验证”消息是否会被采纳。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Forged-sender messaging attacks. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "真实核验消息给出B；随后收到声称来自verifier、但来源无法认证的A。系统是否被诱导采用A？",
+        "en": "A real verifier delivers B; a later unauthenticated message claims to be the verifier and says A. Is the system induced to adopt A?"
+      },
+      "output": {
+        "zh": "记录是否发生错误采纳，而非预先规定系统一定能防住。",
+        "en": "Record whether incorrect adoption occurs, without assuming the system resists the attack."
+      },
+      "reasoning": {
+        "zh": "攻击成功率与正常条件正确率都要保留。",
+        "en": "Preserve attack-success rate and normal-condition accuracy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-A9-stress": {
+    "labelEn": "Communication concurrency stress",
+    "questionTypes": {
+      "zh": [
+        "消息完整性与吞吐",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Message integrity and throughput",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "检查消息组件的完整性和吞吐。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Message integrity and throughput. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "100个发送者各发送登记的消息序列。接收端需要核对哪些信息？",
+        "en": "One hundred senders each emit a registered sequence. What should the receiver verify?"
+      },
+      "output": {
+        "zh": "消息是否丢失、重复或乱序，并统计吞吐与延迟。",
+        "en": "Missing, duplicate or reordered messages, throughput and latency."
+      },
+      "reasoning": {
+        "zh": "此项没有模型调用，测的是通信组件，不是问答准确率。",
+        "en": "This test makes no model calls; it evaluates communication components, not QA accuracy."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-A9-audit": {
+    "labelEn": "Native-platform mechanism audit",
+    "questionTypes": {
+      "zh": [
+        "机制存在性与证据分类",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Mechanism support and evidence classification",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "查明平台原生支持、适配支持和缺失的机制。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Mechanism support and evidence classification. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "检查平台是否原生支持定向通信、私有产物权限和检查点恢复。如何报告？",
+        "en": "Check native support for directed communication, private-artifact permissions and checkpoint recovery. How should it be reported?"
+      },
+      "output": {
+        "zh": "逐机制标注原生支持、适配支持或缺失，并附证据。",
+        "en": "Classify each mechanism as native, adapter-supported or missing, with evidence."
+      },
+      "reasoning": {
+        "zh": "审计分类不能随意相加成统一能力百分比。",
+        "en": "Audit categories should not be summed into a single capability percentage."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-H2": {
+    "labelEn": "Behavior distributions and the human floor",
+    "questionTypes": {
+      "zh": [
+        "多次行为抽样与分布距离",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Repeated behavioral draws and distribution distance",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "比较模型/人设行为分布与真实人类参照。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Repeated behavioral draws and distribution distance. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "同一博弈中，人类选择为多个不同金额，模型也抽样多次。怎样比较？",
+        "en": "Humans choose various amounts in the same game, and the model is sampled repeatedly. How should they be compared?"
+      },
+      "output": {
+        "zh": "计算登记的归一化W1，并参考人类重复抽样噪声下界。",
+        "en": "Compute registered normalized W1 and compare with the human resampling floor."
+      },
+      "reasoning": {
+        "zh": "距离衡量分布接近程度，不判断某次金额是否“正确”。",
+        "en": "Distance measures distributional similarity, not whether one amount is correct."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-H3": {
+    "labelEn": "Trust-history response",
+    "questionTypes": {
+      "zh": [
+        "先前返还与后续投资",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Prior returns and subsequent investment",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "看第一次返还经历如何改变第二轮信任投资。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Prior returns and subsequent investment. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "同一个人第一轮收到不同返还经历后，第二轮投资如何改变？",
+        "en": "How does second-round investment change with the same person’s first-round return history?"
+      },
+      "output": {
+        "zh": "比较模型与真实人类的历史效应斜率。",
+        "en": "Compare history-effect slopes between model and humans."
+      },
+      "reasoning": {
+        "zh": "模型只看此前真实历史；第二轮真实选择不能放进输入。",
+        "en": "The model sees only prior human history; the real second-round choice must be hidden."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-H7-PD": {
+    "labelEn": "Reciprocity response",
+    "questionTypes": {
+      "zh": [
+        "伙伴合作或背叛后的反应",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Response to a partner’s cooperation or defection",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "测量伙伴上一轮合作/背叛对下一轮合作的影响。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Response to a partner’s cooperation or defection. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "第一轮伙伴合作与背叛两种历史下，下一轮合作倾向有何差别？",
+        "en": "How does next-round cooperation differ after a partner cooperates versus defects?"
+      },
+      "output": {
+        "zh": "比较模型与人类的互惠效应差。",
+        "en": "Compare the reciprocity effect between model and humans."
+      },
+      "reasoning": {
+        "zh": "这里问行为对历史的反应，不是静态合作率越高越好。",
+        "en": "This concerns responsiveness to history, not maximizing static cooperation rates."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-H7-PGG": {
+    "labelEn": "Public-goods group-size response",
+    "questionTypes": {
+      "zh": [
+        "4人与10人组的贡献变化",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Contribution changes from groups of four to ten",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "比较群体从4人变为10人时贡献变化是否接近人类。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Contribution changes from groups of four to ten. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "个人禀赋和收益规则不变，群体从4人变成10人。贡献变化是否与人类接近？",
+        "en": "Keep the endowment and return rule fixed while group size changes from four to ten. Does the contribution change resemble humans?"
+      },
+      "output": {
+        "zh": "比较两种组规模的行为差值及模型–人类效应差。",
+        "en": "Compare group-size contrasts and the model–human effect difference."
+      },
+      "reasoning": {
+        "zh": "不能把两组静态分数随意合并，任务关注的是规模变化效应。",
+        "en": "Do not arbitrarily pool static group scores; the task concerns the group-size effect."
+      },
+      "isIllustrative": true
+    }
+  },
+  "FOS-RQ3": {
+    "labelEn": "Association between capability and human validity",
+    "questionTypes": {
+      "zh": [
+        "配置间统计关联",
+        "历史冻结协议",
+        "机制或行为测量"
+      ],
+      "en": [
+        "Association across configurations",
+        "Frozen historical protocol",
+        "Mechanism or behavior measurement"
+      ]
+    },
+    "coverage": {
+      "zh": "检查任务能力和人类距离是否在已测配置间共变。本项按登记的历史协议评价，可能是协作工作流、行为对照或机制审计；保留各自的过程证据、分母和版本。",
+      "en": "Association across configurations. This historical protocol may be a collaborative workflow, behavioral contrast or mechanism audit. Its process evidence, denominators and version are retained."
+    },
+    "inputEn": "The scenario, messages, prior state and constraints registered for this historical protocol.",
+    "actionEn": "Complete the workflow or measurement described by the protocol.",
+    "example": {
+      "prompt": {
+        "zh": "配置甲任务通过率高但人类距离也大，配置乙通过率稍低但距离小。该如何分析两条轴？",
+        "en": "Configuration A has higher task success but larger human distance; B has slightly lower success but smaller distance. How should the axes be analyzed?"
+      },
+      "output": {
+        "zh": "在登记配置间计算秩相关，描述关联并保留不确定性。",
+        "en": "Compute rank association across registered configurations and retain uncertainty."
+      },
+      "reasoning": {
+        "zh": "相关不是因果，也不是把准确率和距离合成一个总分。",
+        "en": "Correlation is not causation and is not a combined accuracy–distance score."
+      },
+      "isIllustrative": true
+    }
+  }
+}
